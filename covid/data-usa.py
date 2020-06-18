@@ -1,5 +1,6 @@
 import requests
 import csv
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib
@@ -29,9 +30,13 @@ end_date = df_us.iloc[0,0] # extract latest date from the data set
 
 
 #plot info deaths and pos cases
-x = pd.date_range(start_date, end_date) # properly formats our x-axis range
-y1 = df_us['positive'][::-1] #reverse list so older data is first
-y2 = df_us['death'][::-1] #reverse list so older data is first
+x = np.array(df_us['date'])#pd.date_range(start_date, end_date) # properly formats our x-axis range
+y1 = np.array(df_us['positive']) #reverse list so older data is first
+y2 = np.array(df_us['death']) #reverse list so older data is first
+
+
+
+
 plt.plot(x,y1,label="Positive cases")
 plt.plot(x,y2,label="Deaths")
 plt.xlabel("date")
@@ -39,4 +44,3 @@ plt.ylabel("count")
 plt.title('US corona cases')
 plt.legend() # to display labels
 plt.show()
-
