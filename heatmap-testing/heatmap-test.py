@@ -20,4 +20,8 @@ for n in cases:
     scaled.append(new_value)
 
 fig = px.choropleth(locations=states, locationmode="USA-states", color=scaled, scope="usa")
+
+
+fig.update_layout(title_text='COVID Heatmap')
+
 fig.show()

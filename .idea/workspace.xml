@@ -52,7 +52,7 @@
       <recent name="C:\Users\arch7\Documents\GitHub\covid-visuals\testing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.heatmap-test">
+  <component name="RunManager" selected="Python.heatmap-animation-test">
     <configuration name="corona-graphs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="covid-visuals" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="graph-test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="heatmap-animation-test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="covid-visuals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,11 +82,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/heatmap-testing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph-test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/heatmap-testing/heatmap-animation-test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="heatmap-test-v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="covid-visuals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/heatmap-testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/heatmap-testing/heatmap-test-v2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,34 +158,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testing-corona" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="covid-visuals" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing-corona.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.heatmap-animation-test" />
+        <item itemvalue="Python.heatmap-test-v2" />
         <item itemvalue="Python.heatmap-test" />
         <item itemvalue="Python.corona-graphs" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.graph-test" />
-        <item itemvalue="Python.testing-corona" />
       </list>
     </recent_temporary>
   </component>
@@ -205,22 +205,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="675" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592325135207" />
-    <state width="939" height="245" key="GridCell.Tab.0.bottom" timestamp="1592416605409">
+    <state width="936" height="171" key="GridCell.Tab.0.bottom" timestamp="1592505649485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="939" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592416605409" />
-    <state width="939" height="245" key="GridCell.Tab.0.center" timestamp="1592416605409">
+    <state width="936" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592505649485" />
+    <state width="936" height="171" key="GridCell.Tab.0.center" timestamp="1592505649485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="939" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592416605409" />
-    <state width="939" height="245" key="GridCell.Tab.0.left" timestamp="1592416605409">
+    <state width="936" height="171" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592505649485" />
+    <state width="936" height="171" key="GridCell.Tab.0.left" timestamp="1592505649485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="939" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592416605409" />
-    <state width="939" height="245" key="GridCell.Tab.0.right" timestamp="1592416605409">
+    <state width="936" height="171" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592505649485" />
+    <state width="936" height="171" key="GridCell.Tab.0.right" timestamp="1592505649485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="939" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592416605409" />
+    <state width="936" height="171" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592505649485" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1592337107177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
