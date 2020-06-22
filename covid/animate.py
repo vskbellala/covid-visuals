@@ -36,11 +36,11 @@ fig1.update_layout(hovermode="x unified", # consistent hover
     xaxis_title="Date",
     yaxis_title="Count",
     title="COVID-19 US Cases & Deaths",
-    updatemenus=[{"buttons": [ # note - buttons are in a drop down, don't know how to fix that
+    updatemenus=[{'type':'buttons',"buttons": [ # note - buttons are in a drop down, don't know how to fix that
             {
-                "args": [None, {"frame": {"duration": 1, "redraw": False},
-                                "fromcurrent": True, "transition": {"duration": 500,
-                                                                    "easing": "cubic-in-out"}}],
+                "args": [None, {"frame": {"duration": 0, "redraw": False},
+                                "fromcurrent": True, "transition": {"duration": 100,
+                                                                    "easing": "cubic-in"}}],
                 "label": "Play",
                 "method": "animate"
             }, # play button
