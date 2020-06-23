@@ -6,7 +6,7 @@ url = 'https://covidtracking.com/api/v1/states/daily.csv'
 data = pd.read_csv(url, parse_dates=['date'], usecols=['date', 'state', 'positive'])
 df = pd.DataFrame(data)
 df = df[::-1]
-# Reads data from CSV, outputs to DataFrame, and reverses order of the rows
+# Reads data from CSV, outputs to a DataFrame, and reverses order of the rows
 
 df['date'] = df['date'].dt.strftime('%m/%d')
 df['date'] = df['date'].astype('str')
@@ -26,7 +26,7 @@ fig = px.choropleth(df,
 # Builds and animates a choropleth(heatmap) map with COVID-19 positive cases overtime
 
 fig.update_layout(
-    title_text='COVID-19 Heatmap',
+    title_text='COVID-19 US Heatmap',
     geo=dict(
         scope='usa',
         projection=go.layout.geo.Projection(type='albers usa'),
