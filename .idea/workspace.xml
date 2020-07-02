@@ -47,16 +47,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/covidlocal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bubble-chart-testing" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arch7\Documents\GitHub\covid-visuals\bubble-chart-testing" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arch7\Documents\GitHub\covid-visuals\heatmap-testing" />
       <recent name="C:\Users\arch7\Documents\GitHub\covid-visuals\testing" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bubble-test (1)">
+  <component name="RunManager" selected="Python.heatmap-animation-test">
     <configuration name="animate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="covid-visuals" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,10 +167,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.heatmap-animation-test" />
         <item itemvalue="Python.bubble-test (1)" />
         <item itemvalue="Python.bubble-test" />
         <item itemvalue="Python.bubble" />
-        <item itemvalue="Python.heatmap-animation-test" />
         <item itemvalue="Python.animate" />
       </list>
     </recent_temporary>
@@ -210,22 +213,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="675" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592325135207" />
-    <state width="936" height="182" key="GridCell.Tab.0.bottom" timestamp="1592935218081">
+    <state width="809" height="125" key="GridCell.Tab.0.bottom" timestamp="1593191540651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="182" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592935218081" />
-    <state width="936" height="182" key="GridCell.Tab.0.center" timestamp="1592935218081">
+    <state width="809" height="125" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593191540651" />
+    <state width="809" height="125" key="GridCell.Tab.0.center" timestamp="1593191540651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="182" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592935218081" />
-    <state width="936" height="182" key="GridCell.Tab.0.left" timestamp="1592935218081">
+    <state width="809" height="125" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593191540651" />
+    <state width="809" height="125" key="GridCell.Tab.0.left" timestamp="1593191540650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="182" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592935218081" />
-    <state width="936" height="182" key="GridCell.Tab.0.right" timestamp="1592935218081">
+    <state width="809" height="125" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593191540650" />
+    <state width="809" height="125" key="GridCell.Tab.0.right" timestamp="1593191540651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="182" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592935218081" />
+    <state width="809" height="125" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593191540651" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1592337107177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
