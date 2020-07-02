@@ -23,3 +23,16 @@ def lin_reg():
     return float(model.coef_[0][0])
 
 # Finds the k constant using slope of linear regression model
+
+
+def average():
+    temp = []
+    for i in range(0, length):
+        temp.append(df_recovered[i] / df_positive[i])  # k = df_recovered/df_positive
+    return float(sum(temp) / len(temp))
+
+# Finds the k constant by averaging all daily k constants
+
+
+print(lin_reg())
+print(average())
