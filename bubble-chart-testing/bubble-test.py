@@ -1,10 +1,11 @@
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 from datetime import datetime
 
 url = 'https://covidtracking.com/api/v1/states/daily.csv'
-data = pd.read_csv(url, parse_dates=['date'], usecols=['date', 'state', 'positive', 'death', 'totalTestResults'])
+data = pd.read_csv(url, parse_dates=['date'], usecols=['date', 'state', 'positive', 'negative', 'totalTestResults'])
 df_unfiltered = pd.DataFrame(data)
 # Reads data from CSV and outputs to a DataFrame
 
@@ -27,31 +28,40 @@ df = df.fillna(0)
 # Fills in NaN with 0
 
 fig = px.scatter(df,
-                 x='totalTestResults',
-                 y='death',
-                 animation_frame='date',
-                 animation_group='state',
-                 size='positive',
-                 size_max=60,
-                 log_x=True,
-                 log_y=True,
-                 range_x=[1000, 10000000],
-                 range_y=[10, 100000],
-                 hover_name='state',
-                 labels={'positive': 'Positive Cases',
-                         'date': 'Date',
-                         'state': 'State',
-                         'totalTestResults': 'Total Tests Done',
-                         'death': 'Deaths'}
-                 )
+                x='positive',
+                y='negative',
+                animation_frame='date',
+                animation_group='state',
+                size='totalTestResults',
+                size_max=60,
+                color='totalTestResults',
+                color_continuous_scale=px.colors.sequential.haline,
+                range_color=(df['totalTestResults'].min(), df['totalTestResults'].max()),
+                log_x=True,
+                log_y=True,
+                range_x=[1000, 1000000],
+                range_y=[1000, 100000000],
+                hover_name='state',
+                labels={'positive': 'Positive Cases',
+                        'date': 'Date',
+                        'state': 'State',
+                        'totalTestResults': 'Total Tests Done',
+                        'negative': 'Negative Cases'}
+                )
 # Builds a bubble chart animation with a logarithmic scale
 
-fig.update_layout(xaxis_title="Total Tests Done",
-                  yaxis_title="Total Deaths",
-                  title="COVID-19 Bubble Chart")
+fig.update_layout(xaxis_title="Positive Cases",
+                  yaxis_title="Negative Cases",
+                  title="U.S. COVID-19 Tests",
+                  xaxis_showgrid=False,
+                  yaxis_showgrid=False)
 # Labels the graph
 
 fig.layout.sliders[0].currentvalue['prefix'] = 'Date: '
 # Reformats the "Date" on the slider
+
+fig.layout.updatemenus[0].buttons[0].args[1]['frame']['duration'] = 150
+fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 150
+# Adjusts the time in between frames in the animation
 
 fig.show()
