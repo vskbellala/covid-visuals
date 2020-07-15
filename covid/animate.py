@@ -35,8 +35,7 @@ fig1.update_layout(hovermode="x unified", # consistent hover
     yaxis=dict(range=[0, df_us['positive'].max()*1.25], autorange=False), # y axis range - use pos max x 1.25 to improve viewability
     xaxis_title="Date",
     yaxis_title="Count",
-    title="COVID-19 US Cases & Deaths")
-    ''',
+    title="COVID-19 US Cases & Deaths",
     updatemenus=[{'type':'buttons',"buttons": [ # note - buttons are in a drop down, don't know how to fix that
             {
                 "args": [None, {"frame": {"duration": 0, "redraw": False},
@@ -53,5 +52,5 @@ fig1.update_layout(hovermode="x unified", # consistent hover
                 "method": "animate"
             }# pause button
         ]
-}]'''
+}])
 fig1.write_html(file="testing.html",auto_play=True,full_html=False,include_plotlyjs='cdn') # display figure
