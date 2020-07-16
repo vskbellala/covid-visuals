@@ -26,11 +26,11 @@ death_names = raceData.cr_key('Deaths_',death_vars) # create array of race names
 
 
 
-# For subplots: fig = make_subplots(rows=1, cols=2, specs=[[{'type':'domain'}, {'type':'domain'}]])
+# For subplots: fig = make_subpl
 
 #Fill with frames for animation
 fig= go.Figure(frames=[go.Frame(
-        data=[go.Pie(labels=case_names,values=raceData.get_set(gr,x,case_vars),title=x.strftime('%B %d, %Y'))]) for x,y in gr]
+        data=[go.Pie(labels=case_names, sort=False, values=raceData.get_set(gr,x,case_vars),title=x.strftime('%B %d, %Y'))]) for x,y in gr]
 )
 
 # Add cases trace
