@@ -53,4 +53,4 @@ fig1.update_layout(hovermode="x unified", # consistent hover
             }# pause button
         ]
 }])
-fig1.show() # display figure
+fig1.write_html(file="testing.html",auto_play=True,full_html=False,include_plotlyjs='cdn') # display figure

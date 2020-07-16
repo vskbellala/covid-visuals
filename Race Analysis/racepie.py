@@ -67,8 +67,7 @@ fig.update_layout(
 fig.update_layout(margin = dict(b=500/2))
 
 #Show Fig
-fig.show()
-
+fig.write_html(file="testing.html",auto_play=False,include_plotlyjs='cdn')
 
 
 
