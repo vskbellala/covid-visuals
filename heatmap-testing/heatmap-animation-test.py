@@ -53,8 +53,8 @@ fig.update_layout(
             thickness=12
             )
         ),
-    font_family='Rockwell', # Font for hoverlabel
-    paper_bgcolor='#f8f9fb', # Background color of plot figure
+    font_family='Rockwell', # Font for plot
+    paper_bgcolor='#f8f9fb', # Background color of whole thing
 )
 # Updates the layout of the heatmap
 
