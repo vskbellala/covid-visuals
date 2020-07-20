@@ -20,7 +20,7 @@ df = df_unfiltered.loc[between_two_dates]
 df = df[::-1]
 # Reverses order of rows in DataFrame
 
-df['date'] = df['date'].dt.strftime('%m/%d')
+df['date'] = df['date'].dt.strftime('%B %d, %Y')
 df['date'] = df['date'].astype('str')
 # Reformats the date to month/day
 

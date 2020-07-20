@@ -63,9 +63,20 @@ fig1.update_traces(mode="lines") # change markers to a continuous line
 fig1.update_layout(hovermode="x unified", # consistent hover
    # xaxis=dict(range=[t.min(),t.max()], autorange=False), #x axis range
     #yaxis=dict(range=[0, s.max()*1.25], autorange=False), # y axis range - use maximum y-value * 1.25 to improve viewability
+    xaxis=dict(showline=False),
+    yaxis=dict(showline=False, gridcolor='#e8e8e8'),
     xaxis_title="Days",
     yaxis_title="Fraction of US Population",
     title="COVID-19 SIR Model",
+    font_family='Rockwell', # Font for plot
+    paper_bgcolor='#f8f9fb', # Background color of whole thing
+    plot_bgcolor='#f8f9fb', # Background color of plot
+    hoverlabel=dict(
+        bgcolor='#f8f9fb', # Background color of hoverlabel
+        font_size=12, # Font size for hoverlabel
+        font_family='Rockwell' # Font for hoverlabel
+        ),
+    xaxis_showgrid=False,
     updatemenus=[{'type':'buttons',"buttons": [ # Play Pause Buttons w/ smooth animation
             { # Modify frame and  transition duration/easing to change animation playbck
                 "args": [None, {"frame": {"duration": 0, "redraw": False},
@@ -83,5 +94,7 @@ fig1.update_layout(hovermode="x unified", # consistent hover
             }# pause button
         ]
 }])
+
+fig1.layout.yaxis.showline = False
 # fig1.update_layout(xaxis_type="log")
 fig1.show() # display figure
