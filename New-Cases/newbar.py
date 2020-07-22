@@ -47,5 +47,5 @@ df['state'] = [us.states.lookup(x).name for x in df['state']]
 # doesn't work when played forwards
 fig = px.bar(df, x='region', y="positiveIncrease", color="region", animation_frame="date", animation_group="state", log_y=True, hover_name='state',range_y=[10,100000])
 fig.update_layout(xaxis=dict(autorange=False),yaxis=dict(autorange=False))
-fig.show()
 
+fig.show()
