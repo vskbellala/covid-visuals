@@ -31,8 +31,8 @@ fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['positive'],name="Positive Ca
 fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['death'],name="Deaths", line=dict(color='#3fabe0'))) # death graph
 fig1.update_traces(mode="lines") # change markers to a continuous line
 fig1.update_layout(hovermode="x unified", # consistent hover
-    xaxis=dict(showline=False, range=[df_us['date'].min(),df_us['date'].max()], autorange=False), #x axis range
-    yaxis=dict(gridcolor='#e8e8e8',showline=False, range=[0, df_us['positive'].max()*1.25], autorange=False), # y axis range - use pos max x 1.25 to improve viewability, color of y-axis gridlines
+    xaxis=dict(linecolor='#f8f9fb', range=[df_us['date'].min(),df_us['date'].max()], autorange=False), #x axis range
+    yaxis=dict(gridcolor='#e8e8e8',linecolor='#f8f9fb', range=[0, df_us['positive'].max()*1.25], autorange=False), # y axis range - use pos max x 1.25 to improve viewability, color of y-axis gridlines
     xaxis_title="Date",
     yaxis_title="Count",
     title="COVID-19 US Cases & Deaths",

@@ -1,10 +1,11 @@
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 import pandas as pd
 import us
 
 url = 'https://covidtracking.com/api/v1/states/daily.csv'
-data = pd.read_csv(url, parse_dates=['date'], usecols=['date', 'state', 'positive'])
+data = pd.read_csv(url, parse_dates=['date'], usecols=['date', 'state', 'death'])
 df = pd.DataFrame(data)
 df = df[::-1]
 # Reads data from CSV, outputs to a DataFrame, and reverses order of the rows
@@ -28,28 +29,28 @@ for i in range(0, len(df['state'])):
         pop = int(pop_df.iloc[x, 12])
         fullname = st.replace('.', '')
         if state == fullname:
-            df.iloc[i, 2] = (int(df.iloc[i, 2]) / pop) * 1000000
+            df.iloc[i, 2] = int((df.iloc[i, 2] / pop) * 1000000)
 
 
 fig = px.choropleth(df,
                     locationmode='USA-states',
                     locations='state',
                     animation_frame='date',
-                    color='positive',
+                    color=np.log10(df['death']),
                     color_continuous_scale=px.colors.sequential.dense,
-                    range_color=(0, df['positive'].max()),
-                    labels={'positive': 'Positive Cases Per 1 Million People',
+                    range_color=(0, 4),
+                    labels={'death': 'Deaths Cases Per 1 Million People',
                             'date': 'Date',
                             'state': 'State'},
                     template='none',
                     hover_name='state',
-                    hover_data={'date': True, 'positive': True, 'state': False}
+                    hover_data={'date': True, 'death': True, 'state': False}
                     )
-# Builds and animates a choropleth(heatmap) map with COVID-19 positive cases over time
+# Builds and animates a choropleth(heatmap) map with COVID-19 deaths cases over time
 
 fig.update_layout(
     title=dict(
-        text='COVID-19 US Heatmap Per Capita*',
+        text='COVID-19 US Deaths Heatmap',
         font=dict(
             size=24 # Font size for title
             )
@@ -71,8 +72,10 @@ fig.update_layout(
             thicknessmode='pixels',
             thickness=12,
             title=dict(
-                text='Positive Cases*'
-                )
+                text='Deaths*'
+                ),
+            tickvals=[0, 1, 2, 3, 4],
+            ticktext=[0, 10, 100, 1000, 10000]
             )
         ),
     font_family='Rockwell', # Font for plot
@@ -86,16 +89,16 @@ fig.update_layout(
 )
 # Updates the layout of the heatmap
 
-fig.layout.updatemenus[0].buttons[0].args[1]['frame']['duration'] = 100
-fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 100
+fig.layout.updatemenus[0].buttons[0].args[1]['frame']['duration'] = 110
+fig.layout.updatemenus[0].buttons[0].args[1]['transition']['duration'] = 110
 # Adjusts the time in between frames in the animation
 
 fig.layout.sliders[0].currentvalue['prefix'] = 'Date: '
 # Reformats the "Date" on the slider
 
-fig.update_traces(hovertemplate='<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Positive Cases*: %{z}<extra></extra>')
+fig.update_traces(hovertemplate='<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Deaths*: %{customdata[1]}<extra></extra>')
 for frame in fig.frames:
-    frame['data'][0].hovertemplate = '<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Positive Cases*: %{z}<extra></extra>'
+    frame['data'][0].hovertemplate = '<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Deaths*: %{customdata[1]}<extra></extra>'
 
 fig.layout.updatemenus[0].showactive = True
 fig.layout.sliders[0].tickcolor = '#f8f9fb'  # Blends ticks in with background

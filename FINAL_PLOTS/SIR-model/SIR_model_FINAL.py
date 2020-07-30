@@ -60,11 +60,9 @@ fig1.update_traces(mode="lines") # change markers to a continuous line
 
 # fig1.add_trace(go.Scatter(x=list(range(kfi.length)), y=res,name="Positive Cases",mode='markers')) # pos trace
 
-fig1.update_layout(hovermode="x unified", # consistent hover
-   # xaxis=dict(range=[t.min(),t.max()], autorange=False), #x axis range
-    #yaxis=dict(range=[0, s.max()*1.25], autorange=False), # y axis range - use maximum y-value * 1.25 to improve viewability
-    xaxis=dict(showline=False),
-    yaxis=dict(showline=False, gridcolor='#e8e8e8'),
+fig1.update_layout(hovermode="x unified",
+    xaxis=dict(linecolor='#f8f9fb'),
+    yaxis=dict(gridcolor='#e8e8e8', linecolor='#f8f9fb'),
     xaxis_title="Days",
     yaxis_title="Fraction of US Population",
     title="COVID-19 SIR Model",
@@ -95,6 +93,5 @@ fig1.update_layout(hovermode="x unified", # consistent hover
         ]
 }])
 
-fig1.layout.yaxis.showline = False
 # fig1.update_layout(xaxis_type="log")
 fig1.show() # display figure

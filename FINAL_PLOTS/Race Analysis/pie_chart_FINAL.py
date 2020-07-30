@@ -39,10 +39,8 @@ fig.add_trace(go.Pie(labels=case_names,values=raceData.get_set(gr,rd.df['Date'].
 # fig.add_trace(go.Pie(labels=death_names,values=rd.agg[death_vars],title=dict(text="Deaths")))
 
 #Update trace styling
-fig.update_traces(hoverinfo='value', textinfo='label+percent', textfont_size=18,
-                  marker=dict(line=dict(color='#000000', width=2)),automargin=False
-
-)
+fig.update_traces(hovertemplate='Cases: %{value}<extra></extra>', textinfo='label+percent', textfont_size=18,
+                  marker=dict(line=dict(color='#000000')),automargin=False, sort=False, title=dict(font=dict(size=17)))
 
 #layout styling
 fig.update_layout(
@@ -63,14 +61,30 @@ fig.update_layout(
                 "method": "animate"
             }# pause button
         ]
-}])
+}],
+    font_family='Rockwell', # Font for plot
+    paper_bgcolor='#f8f9fb', # Background color of whole thing
+    plot_bgcolor='#f8f9fb', # Background color of plot
+    hoverlabel=dict(
+        bgcolor='#f8f9fb', # Background color of hoverlabel
+        font_size=12, # Font size for hoverlabel
+        font_family='Rockwell' # Font for hoverlabel
+        ))
+
+
 fig.update_layout(margin = dict(b=500/2))
 
+fig.update_traces(hole=0.4, marker=dict(line=dict(width=1.5)))
+for frame in fig.frames:
+    frame['data'][0].hole = 0.4
+    frame['data'][0].marker.line.width = 1.5
+    frame['data'][0].sort = False
+    frame['data'][0].title.font.size = 17
+
 #Show Fig
-fig.write_html(file="testing.html",auto_play=False,include_plotlyjs='cdn')
+#fig.write_html(file="testing.html",auto_play=False,include_plotlyjs='cdn')
 
-
-
+fig.show()
 
 
 # Create pie chart using plotly express
