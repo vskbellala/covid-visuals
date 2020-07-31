@@ -1,2 +1,2 @@
 # covid-visuals
-Data visualization of COVID-19 for the Naperville/Aurora area
+Data visualization and analysis of COVID-19 in the US
