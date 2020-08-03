@@ -1,0 +1,1 @@
+***May 26-31***- George Floyd's killing spurs protests against police brutality not only in the US but around the world increasing concerns about the Coronovirus.The protests did not produce a surge in cases as many protesters were reported to have worn masks.  
