@@ -107,8 +107,11 @@ for frame in fig.frames:
 fig.layout.updatemenus[0].showactive = True
 fig.layout.sliders[0].tickcolor = '#f8f9fb'  # Blends ticks in with background
 fig.layout.coloraxis.colorbar.title.font.size = 15
-
+'''
 fig.write_html(file="../plots/deaths_heat.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
-    animation_opts=a_opts
+  animation_opts=a_opts
 
 ) # write figure to html
+'''
+
+print(fig.layout)

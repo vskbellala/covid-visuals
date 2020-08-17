@@ -54,14 +54,14 @@ fig.update_layout(
     updatemenus=[{'type':'buttons',"buttons": [ # Play Pause Buttons w/ smooth animation
             { # Modify frame and  transition duration/easing to change animation playbck
                 "args": [None, a_opts],
-                "label": "Play",
+                "label": "&#9654;",
                 "method": "animate"
             }, # play button
             {
                 "args": [[None], {"frame": {"duration": 0, "redraw": False},
                                   "mode": "immediate",
                                   "transition": {"duration": 0}}],
-                "label": "Pause",
+                "label": "&#9724;",
                 "method": "animate"
             }# pause button
         ]
@@ -87,6 +87,9 @@ for frame in fig.frames:
 
 #Show Fig
 #fig.write_html(file="testing.html",auto_play=False,include_plotlyjs='cdn')
+
+fig.layout.updatemenus[0].pad.r = 15
+fig.layout.updatemenus[0].pad.b = 15
 
 fig.write_html(file="../../plots/cases_pie.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts

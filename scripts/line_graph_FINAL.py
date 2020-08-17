@@ -48,18 +48,21 @@ fig1.update_layout(hovermode="x unified", # consistent hover
     updatemenus=[{'type':'buttons',"buttons": [ # note - buttons are in a drop down, don't know how to fix that
             {
                 "args": [None, a_opts],
-                "label": "Play",
+                "label": "&#9654;",
                 "method": "animate"
             }, # play button
             {
                 "args": [[None], {"frame": {"duration": 0, "redraw": False},
                                   "mode": "immediate",
                                   "transition": {"duration": 0}}],
-                "label": "Pause",
+                "label": "&#9724;",
                 "method": "animate"
             }# pause button
         ]
 }])
+
+fig1.layout.updatemenus[0].pad.r = 15
+fig1.layout.updatemenus[0].pad.b = 15
 
 fig1.write_html(file="../plots/covid_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts
