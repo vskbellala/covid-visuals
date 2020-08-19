@@ -139,7 +139,7 @@ fig1.layout.updatemenus[0].pad.r = 15
 fig1.layout.updatemenus[0].pad.b = 15
 
 
-fig1.write_html(file="../../plots/austin_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
+fig1.write_html(file="../../docs/plots/austin_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts) # write figure to html
 
 '''

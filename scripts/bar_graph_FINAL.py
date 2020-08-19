@@ -103,5 +103,5 @@ fig.layout.sliders[0].currentvalue['prefix'] = 'Date: '
 fig.layout.updatemenus[0].showactive = True
 fig.layout.sliders[0].tickcolor = '#f8f9fb'  # Blends ticks in with background
 
-fig.write_html(file="../plots/region_bar.html",auto_play=True,full_html=False,include_plotlyjs='cdn')
+fig.write_html(file="../docs/plots/region_bar.html",auto_play=True,full_html=False,include_plotlyjs='cdn')
 # write figure to html
