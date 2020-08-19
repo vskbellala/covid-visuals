@@ -48,8 +48,8 @@
     files = [
         ['last_update.md', 'update'],
         ['stats/totalTestResults.md', 'tests'],
-        ['stats/cases.md', 'cases'],
-        ['stats/deaths.md', 'deaths']
+        ['stats/positive.md', 'cases'],
+        ['stats/death.md', 'deaths']
     ];
     for (i = 0; i < files.length; i++) {
         readFile(files[i][0], files[i][1]);
@@ -70,7 +70,7 @@
                         <div class="label">Total Tests</div>
                     </div>
                     <div class="ui inverted yellow statistic">
-                        <div class="value" id='cases'></div>
+                        <div class="value" id='cases'><p>56</p></div>
                         <div class="label">
                             Cases
                         </div>
