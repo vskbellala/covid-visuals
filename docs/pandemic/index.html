@@ -33,15 +33,18 @@
     <script>
     // Files 2D Array
     // Structured ["Path String","Element ID"]
-
     files = [
-        ['../content/test.md', 'E'],
-        ['../content/test.md', 'C'],
         ['../content/last_update.md', 'update']
     ];
-
+    timefiles = [
+        ['../content/test.md', 'E'],
+        ['../content/test.md', 'C']
+    ];
     for (i = 0; i < files.length; i++) {
-        readFile(files[i][0], files[i][1], i);
+        readFile(files[i][0], files[i][1]);
+    }
+    for (i = 0; i < timefiles.length; i++) {
+        readTime(timefiles[i][0], timefiles[i][1], i);
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">

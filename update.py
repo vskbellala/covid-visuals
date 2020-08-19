@@ -65,7 +65,7 @@ for city in cityg:
 print('updating last_update.md') # used for automagically updating the date of last update (aka when this script is ran)
 os.chdir('../../')
 date = datetime.datetime.now()
-f = open("content/last_update.md", "w")
+f = open("docs/content/last_update.md", "w")
 f.write('Last updated [{0}](https://github.com/vskbellala/covid-visuals/commits/master).'.format(date.strftime('%m/%d/%Y')))
 f.close()
 

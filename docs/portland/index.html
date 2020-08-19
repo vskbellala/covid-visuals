@@ -36,12 +36,11 @@
 
     files = [
         ['../content/test.md', 'E'],
-        ['../content/test.md', 'C'],
-        ['../content/last_update.md', 'update']
+        ['../content/test.md', 'C']
     ];
-
+    readFile('../content/last_update.md', 'update');
     for (i = 0; i < files.length; i++) {
-        readFile(files[i][0], files[i][1], i);
+        readTime(files[i][0], files[i][1], i);
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">

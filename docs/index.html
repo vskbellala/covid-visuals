@@ -22,14 +22,10 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
-        flex-flow: column;
     }
 
-    .fillz {
-        flex-grow: 1;
-        align-content: center;
-
+    body>.grid {
+        height: 100%;
     }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -49,45 +45,36 @@
     <script>
     // Files 2D Array
     // Structured ["Path String","Element ID"]
-
-    files = [
-        ['content/last_update.md', 'update']
-    ];
-
-    for (i = 0; i < files.length; i++) {
-        readFile(files[i][0], files[i][1], i);
-    }
+    readFile('content/last_update.md', 'update');
     </script>
-    <div class="ui middle aligned center aligned grid fillz">
+    <div class="ui middle aligned center aligned grid">
         <div class="column">
-            <div class='ui basic segment'>
-                <div class='ui container'>
-                    <div class='ui hidden divider'></div>
-                    <h1>
-                        <div class='ui inverted large header'>covid-visuals</div>
-                    </h1>
-                    <h3 class="ui inverted header">In December 2019, a new strain of coronavirus was identified in Wuhan, Hubei, China. Since then, the virus has spread across the world, resulting in an ongoing global pandemic. With data from <a href="https://covidtracking.com/"><span class="ui inverted violet text">The COVID Tracking Project</span></a>, we created this website to publicize and disseminate knowledge regarding this devastating disease.</h3>
-                    <div class="ui hidden divider"></div>
-                    <div class="ui three stackable small statistics">
-                        <div class="ui inverted statistic">
-                            <div class="value">61,000,000 +</div>
-                            <div class="label">Total Tests</div>
+            <div class='ui hidden section divider'></div>
+            <div class='ui container'>
+                <h1>
+                    <div class='ui inverted large header'>covid-visuals</div>
+                </h1>
+                <h3 class="ui inverted header">In December 2019, a new strain of coronavirus was identified in Wuhan, Hubei, China. Since then, the virus has spread across the world, resulting in an ongoing global pandemic. With data from <a href="https://covidtracking.com/"><span class="ui inverted violet text">The COVID Tracking Project</span></a>, we created this website to publicize and disseminate knowledge regarding this devastating disease and its impact on the United States.</h3>
+                <div class="ui hidden divider"></div>
+                <div class="ui three stackable small statistics">
+                    <div class="ui inverted statistic">
+                        <div class="value">61,000,000 +</div>
+                        <div class="label">Total Tests</div>
+                    </div>
+                    <div class="ui inverted yellow statistic">
+                        <div class="value">
+                            5,000,000 +
                         </div>
-                        <div class="ui inverted yellow statistic">
-                            <div class="value">
-                                5,000,000 +
-                            </div>
-                            <div class="label">
-                                Cases
-                            </div>
+                        <div class="label">
+                            Cases
                         </div>
-                        <div class="ui inverted red statistic">
-                            <div class="value">
-                                150,000 +
-                            </div>
-                            <div class="label">
-                                Deaths
-                            </div>
+                    </div>
+                    <div class="ui inverted red statistic">
+                        <div class="value">
+                            150,000 +
+                        </div>
+                        <div class="label">
+                            Deaths
                         </div>
                     </div>
                 </div>
@@ -129,18 +116,16 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="ui hidden divider"></div>
-    <div class="ui vertical footer inverted segment">
-        <div class="ui center aligned container">
-            <div class="ui horizontal inverted small divided link list">
-                <div class='item'>
-                    <strong>Made with <a href="https://bellala.org"><span class='ui red text'><i class="heart icon"></i></span></a>and <a href="https://fomantic-ui.com/">Fomantic-UI</a>.</strong>
-                </div>
-                <div class='item' id='update'></div>
-                <div class='item'>
-                    Photo by <a href="https://unsplash.com/@fusion_medical_animation">Fusion Medical Animation</a> on <a href="https://unsplash.com/">Unsplash</a>.
+            <div class='ui hidden section divider'></div>
+            <div class="ui center aligned container">
+                <div class="ui horizontal inverted small divided link list">
+                    <div class='item'>
+                        <strong>Made with <a href="https://bellala.org"><span class='ui red text'><i class="heart icon"></i></span></a>and <a href="https://fomantic-ui.com/">Fomantic-UI</a>.</strong>
+                    </div>
+                    <div class='item' id='update'></div>
+                    <div class='item'>
+                        Photo by <a href="https://unsplash.com/@fusion_medical_animation">Fusion Medical Animation</a> on <a href="https://unsplash.com/">Unsplash</a>.
+                    </div>
                 </div>
             </div>
         </div>
