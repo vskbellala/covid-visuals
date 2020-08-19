@@ -17,14 +17,14 @@
         return str => parser.parseFromString(str, "text/html");
     })();
     //Function for reading MD file for timeline
-    function readTime(file, out) {
+    function readTime(fil, out) {
         var http = new XMLHttpRequest();
-        http.open('get', file);
+        http.open('get', fil);
         http.onreadystatechange = function() {
-            var mark = marked(file);
+            var mark = marked(http.responseText);
             document.getElementById(out).innerHTML = mark; //.replace(/\n/g, '<br>'));
             var mhtml = parseHTMLString(mark);
-            document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
+            document.getElementById(out).setAttribute("date-is", mhtml.querySelector("H6").innerHTML);
         };
         http.send();
     }
