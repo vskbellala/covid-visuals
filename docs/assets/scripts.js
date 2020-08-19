@@ -12,15 +12,19 @@
         };
         http.send();
     }
+    const parseHTMLString = (() => {
+        const parser = new DOMParser();
+        return str => parser.parseFromString(str, "text/html");
+    })();
     //Function for reading MD file for timeline
-    function readTime(file, out, x) {
+    function readTime(file, out) {
         var http = new XMLHttpRequest();
         http.open('get', file);
         http.onreadystatechange = function() {
             var mark = marked(file);
             document.getElementById(out).innerHTML = mark; //.replace(/\n/g, '<br>'));
-            var date = document.getElementsByTagName('h6')[x].innerHTML;
-            document.getElementById(out).setAttribute("date-is", date);
+            var mhtml = parseHTMLString(mark);
+            document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
         };
         http.send();
     }
