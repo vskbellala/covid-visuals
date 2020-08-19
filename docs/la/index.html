@@ -31,10 +31,10 @@
     <script>
     // Files 2D Array
     // Structured ["Path String","Element ID"]
-    readFile('../content/last_update.md', 'update');
+    readFile('last_update.md', 'update');
     files = [
-        ['../content/test.md', 'E'],
-        ['../content/test.md', 'C']
+        ['test.md', 'E'],
+        ['test.md', 'C']
     ];
 
     for (i = 0; i < files.length; i++) {
@@ -89,7 +89,7 @@
             <h4>A case study, complemented by visuals.</h4>
         </div>
         <div class="ui container basic segment">
-            <div class="ui embed" data-url="../plots/la_lines.html" data-placeholder="../content/images/plotly_logo.webp" data-icon="play"></div>
+            <div class="ui embed" data-source="plotly" data-id="la_lines" data-placeholder="../content/images/plotly_logo.webp"></div>
         </div>
         <div class="timeline ui text container vertical segment">
             <div class='timeline-item' id="E"></div>

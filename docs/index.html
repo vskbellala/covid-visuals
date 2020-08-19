@@ -45,7 +45,15 @@
     <script>
     // Files 2D Array
     // Structured ["Path String","Element ID"]
-    readFile('content/last_update.md', 'update');
+    files = [
+        ['last_update.md', 'update'],
+        ['stats/totalTestResults.md', 'tests'],
+        ['stats/cases.md', 'cases'],
+        ['stats/deaths.md', 'deaths']
+    ];
+    for (i = 0; i < files.length; i++) {
+        readFile(files[i][0], files[i][1]);
+    }
     </script>
     <div class="ui middle aligned center aligned grid">
         <div class="column">
@@ -58,21 +66,17 @@
                 <div class="ui hidden divider"></div>
                 <div class="ui three stackable small statistics">
                     <div class="ui inverted statistic">
-                        <div class="value">61,000,000 +</div>
+                        <div class="value" id='tests'></div>
                         <div class="label">Total Tests</div>
                     </div>
                     <div class="ui inverted yellow statistic">
-                        <div class="value">
-                            5,000,000 +
-                        </div>
+                        <div class="value" id='cases'></div>
                         <div class="label">
                             Cases
                         </div>
                     </div>
                     <div class="ui inverted red statistic">
-                        <div class="value">
-                            150,000 +
-                        </div>
+                        <div class="value" id='deaths'></div>
                         <div class="label">
                             Deaths
                         </div>
@@ -127,7 +131,7 @@
                     </div>
                     <div class='item' id='update'></div>
                     <div class='item'>
-                        Photo by <a href="https://unsplash.com/@fusion_medical_animation">Fusion Medical Animation</a> on <a href="https://unsplash.com/">Unsplash</a>.
+                        <strong>Photo by <a href="https://unsplash.com/@fusion_medical_animation">Fusion Medical Animation</a> on <a href="https://unsplash.com/">Unsplash</a>.</strong>
                     </div>
                 </div>
             </div>

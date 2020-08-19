@@ -11,7 +11,8 @@ graphs = {'region_bar':"bar_graph_FINAL.py",
 'bubble_chart':'bubble_chart_FINAL.py',
 'bubble_map':'bubble_map_FINAL.py',
 'deaths_heat':'heatmap_percapita_FINAL.py',
-'covid_lines':'line_graph_FINAL.py'
+'covid_lines':'line_graph_FINAL.py',
+'Statistics':'stats.py'
 }
 
 # loop for running python scripts without special dependencies
@@ -66,7 +67,7 @@ print('updating last_update.md') # used for automagically updating the date of l
 os.chdir('../../')
 date = datetime.datetime.now()
 f = open("docs/content/last_update.md", "w")
-f.write('Last updated [{0}](https://github.com/vskbellala/covid-visuals/commits/master).'.format(date.strftime('%m/%d/%Y')))
+f.write('**Last updated [{0}](https://github.com/vskbellala/covid-visuals/commits/master).**'.format(date.strftime('%m/%d/%Y')))
 f.close()
 
 print('All scripts ran.')

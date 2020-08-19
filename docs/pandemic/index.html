@@ -34,11 +34,11 @@
     // Files 2D Array
     // Structured ["Path String","Element ID"]
     files = [
-        ['../content/last_update.md', 'update']
+        ['last_update.md', 'update']
     ];
     timefiles = [
-        ['https://bellala.org/covid-visuals/content/test.md', 'E'],
-        ['https://bellala.org/covid-visuals/content/test.md', 'C']
+        ['test.md', 'E'],
+        ['test.md', 'C']
     ];
     for (i = 0; i < files.length; i++) {
         readFile(files[i][0], files[i][1]);
@@ -101,7 +101,7 @@
             <div class='timeline-item' id="E"></div>
             <div class='timeline-item' id="C"></div>
             <div class='timeline-item' date-is='Visualization: COVID-19 Deaths'>
-                <div class="ui embed" data-url="../plots/deaths_heat.html" data-placeholder="../content/images/plotly_logo.webp" data-icon="play"></div>
+                <div class="ui embed" data-source="plotly" data-id="deaths_heat" data-placeholder="../content/images/plotly_logo.webp"></div>
             </div>
         </div>
         <div class='ui container vertical segment' id='further-reading'>
