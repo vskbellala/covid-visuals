@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 
 '''
 Messy script for automagically updating each plot
@@ -43,6 +44,30 @@ for spec in specg:
 	print('Resetting directory.')
 	sys.stdout.flush()
 	os.chdir('../')
+
+# Commands for city charts!
+
+cityg = ['austin','chicago','houston','jacksonville','LA','nyc','portland']
+citydir = 'individual_cities'
+
+# Get to correct directory
+print('Navigating to directory {0}.'.format(citydir))
+sys.stdout.flush()
+os.chdir('{0}/'.format(citydir))
+
+for city in cityg:
+	print("Running '{0}' python script".format(city))
+	sys.stdout.flush()
+	os.system('py {0}.py'.format(city))
+	print('Completed successfully. Moving to next script.')
+
+
+print('updating last_update.md') # used for automagically updating the date of last update (aka when this script is ran)
+os.chdir('../../')
+date = datetime.datetime.now()
+f = open("content/last_update.md", "w")
+f.write(date.strftime('%m/%d/%Y'))
+f.close()
 
 print('All scripts ran.')
 

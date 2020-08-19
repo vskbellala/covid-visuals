@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Page</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦠</text></svg>">
+    <!-- You MUST include jQuery before Fomantic -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="../assets/scripts.js"></script>
+    <script>
+    $(document)
+        .ready(function() {
+
+            // create sidebar and attach to menu open
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item');
+
+        });
+    </script>
+</head>
+
+<body>
+    <script>
+    // Files 2D Array
+    // Structured ["Path String","Element ID"]
+
+    files = [
+        ['../../content/test.md', 'E'],
+        ['../../content/test.md', 'C']
+    ];
+
+    for (i = 0; i < files.length; i++) {
+        readFile(files[i][0], files[i][1], i);
+    }
+    </script>
+    <div class="ui vertical inverted teal sidebar compact borderless large menu">
+        <a class="active item">
+            <i class="home icon"></i>Home
+        </a>
+        <a class='item'><i class="lungs virus icon"></i>The Coronavirus Pandemic</a>
+        <a class="item"><i class="chart area icon"></i>The SIR Model</a>
+        <div class="item">
+            <i class="book icon"></i>
+            <div class="header">Case Studies</div>
+            <div class="menu">
+                <a class="item">Austin, TX</a>
+                <a class="item">Chicago, IL</a>
+                <a class="item">Houston, TX</a>
+                <a class="item">Jacksonville, FL</a>
+                <a class="item">Los Angeles, CA</a>
+                <a class="item">New York City, NY</a>
+            </div>
+        </div>
+        <a class="item"><i class="head side mask icon"></i>Staying Safe</a>
+        <a class='item'><i class="address card mask icon"></i>About</a>
+        <div class="item">
+            <a class="ui black icon button" href='https://github.com/vskbellala/covid-visuals'>
+                <i class="github icon"></i>
+                GitHub
+            </a>
+            <a class="ui pink icon button" href='https://github.com/vskbellala/covid-visuals'>
+                <i class="heart icon"></i>
+                Donate
+            </a>
+        </div>
+    </div>
+    <div class="pusher">
+        <div class="ui container basic segment">
+            <div class="ui large secondary text menu">
+                <div class='toc item'>
+                    <div class="ui teal  icon button"><i class="sidebar icon"></i></div>
+                </div>
+                <div class='header item'>🦠 covid-visuals</div>
+            </div>
+        </div>
+        <div class='ui center aligned container vertical segment'>
+            <div class="ui text container">
+                <h1><span class="ui large text">Jacksonville, FL</span></h1>
+                <p><span class='ui medium text'>Timeline of Austin COVID</span></p>
+            </div>
+        </div>
+        <div class="ui main container vertical segment">
+            <div class="timeline-item" date-is='20-07-1990'>
+                <h2>Hello, 'Im a single div responsive timeline without mediaQueries!</h2>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+                <p>20-07-1990</p>
+                <img src="https://bellala.org/assets/pics/mvrobot.png">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class='timeline-item' id="E"></div>
+            <div class='timeline-item' id="C"></div>
+            <div class="timeline-item" date-is='20-07-1990'>
+                <h1>Oeehhh, that's awesome.. Me too!</h1>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+                <blockquote>
+                    <p>The overriding design goal for Markdown&#39;s
+                        formatting syntax is to make it as readable
+                        as possible. The idea is that a
+                        Markdown-formatted document should be
+                        publishable as-is, as plain text, without
+                        looking like it&#39;s been marked up with tags
+                        or formatting instructions.</p>
+                </blockquote>
+            </div>
+            <div class="timeline-item" date-is='20-07-1990'>
+                <h1>I'm ::last-child so my border fades ^__^</h1>
+                <p>
+                    I'm speaking with myself, number one, because I have a very good brain and I've said a lot of things. I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? I think the only card she has is the Lorem card.
+                </p>
+            </div>
+        </div>
+        <div class='ui container vertical segment'>
+            <h1>Further Reading</h1>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            <p><strong>Made with <a href="https://bellala.org"><span class='ui red text'><i class="heart icon"></i></span></a>and <a href="https://fomantic-ui.com/">Fomantic-UI</a>.</strong></p>
+        </div>
+    </div>
+</body>
+</html>
