@@ -22,32 +22,20 @@
         const parser = new DOMParser();
         return str => parser.parseFromString(str, "text/html");
     })();
-
-    function addTime(entries) {
-        let time = document.getElementById("timeline");
-        if (time != null) {
-            time.innerHTML = "";
-            for (let i = 0; i < entries.length; i++) {
-                let mhtml = parseHTMLString(entries[i].html);
-                time.innerHTML += "<div class='timeline-item' date-is='"+mhtml.querySelector("h6").innerHTML+"''>"+entries[i].html+"</div>";
-            }
-        }
+    //Function for reading MD file for timeline
+    function readTime(file, out) {
+        var http = new XMLHttpRequest();
+        http.open('get', mpath+file);
+        http.onreadystatechange = function() {
+            var mark = marked(http.responseText);
+            document.getElementById(out).innerHTML = mark; //.replace(/\n/g, '<br>'));
+            var mhtml = parseHTMLString(mark);
+            document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
+        };
+        http.send();
     }
-
-    function makeTimeline(files,path) {
-        let entries = [];
-        for (let f = 0; f < files.length; f++) {
-            let client = new XMLHttpRequest();
-            client.open('GET', mpath+path+files[f]);
-            client.send();
-            client.onreadystatechange = function() {
-                if (client.readyState != 4) return;
-                let html = marked(client.responseText);
-                entries.push({ html: html, url: client.responseURL });
-                addTime(entries);
-            }
-        }
-    }
+    
+    
 
     // for easier plotly embeds
     $.fn.embed.settings.sources = {
@@ -72,17 +60,31 @@
 
     /*
     Deprecated timeline script
-    //Function for reading MD file for timeline
-    function readTime(file, out) {
-        var http = new XMLHttpRequest();
-        http.open('get', mpath+file);
-        http.onreadystatechange = function() {
-            var mark = marked(http.responseText);
-            document.getElementById(out).innerHTML = mark; //.replace(/\n/g, '<br>'));
-            var mhtml = parseHTMLString(mark);
-            document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
-        };
-        http.send();
+    
+    function addTime(entries) {
+        let time = document.getElementById("timeline");
+        if (time != null) {
+            time.innerHTML = "";
+            for (let i = 0; i < entries.length; i++) {
+                let mhtml = parseHTMLString(entries[i].html);
+                time.innerHTML += "<div class='timeline-item' date-is='"+mhtml.querySelector("h6").innerHTML+"''>"+entries[i].html+"</div>";
+            }
+        }
     }
 
+    function makeTimeline(files,path) {
+        let entries = [];
+        files.reverse();
+        for (let f = 0; f < files.length; f++) {
+            let client = new XMLHttpRequest();
+            client.open('GET', mpath+path+files[f]);
+            client.send();
+            client.onreadystatechange = function() {
+                if (client.readyState != 4) return;
+                let html = marked(client.responseText);
+                entries.push({ html: html, url: client.responseURL });
+                addTime(entries);
+            }
+        }
+    }
     */

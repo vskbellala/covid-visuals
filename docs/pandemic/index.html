@@ -36,12 +36,17 @@
     files = [
         ['last_update.md', 'update']
     ];
-    timefiles = ['test.md', 'test.md','deathmap.md'];
-    tpath="";
+    timefiles = [
+        ['test.md', 'E'],
+        ['test.md', 'C']
+    ];
+    tpath = "";
     for (i = 0; i < files.length; i++) {
         readFile(files[i][0], files[i][1]);
     }
-    makeTimeline(timefiles,tpath);
+    for (i = 0; i < timefiles.length; i++) {
+        readTime(tpath + timefiles[i][0], timefiles[i][1]);
+    }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
         <a class="item" href="..">
@@ -93,8 +98,12 @@
         <div class="ui text container basic segment" id='covid-blurb'>
             <p>placeholder text Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         </div>
-        <div id='timeline' class="timeline ui container vertical segment">
-            
+        <div class="timeline ui container vertical segment">
+            <div class='timeline-item' id="E"></div>
+            <div class='timeline-item' id="C"></div>
+            <div class='timeline-item' date-is='Visualization: COVID-19 Deaths'>
+                <div class="ui embed" data-source="plotly" data-id="deaths_heat" data-placeholder="../content/images/plotly_logo.webp"></div>
+            </div>
         </div>
         <div class='ui container vertical segment' id='further-reading'>
             <h1>Further Reading</h1>
