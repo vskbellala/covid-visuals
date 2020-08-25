@@ -8,7 +8,10 @@ table {
 h6 {
     display: none;
 }
-
+hr{
+    border: none;
+    border-top: 1px solid rgba(222, 222, 223);
+}
 blockquote,
 q {
     padding: 1rem;
