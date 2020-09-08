@@ -34,15 +34,22 @@
     // Files 2D Array
     // Structured ["Path String","Element ID"]
     files = [
-        ['last_update.md', 'update']
+        ['history.md', 'history'],
+        ['society.md', 'society'],
+        ['revealing.md', 'revealing'],
+        ['front.md', 'front'],
+        ['data.md', 'data'],
+        ['other.md', 'other']
     ];
     timefiles = [
         ['test.md', 'E'],
         ['test.md', 'C']
     ];
+    fpath = "pandemic/";
     tpath = "";
+    readFile('last_update.md', 'update');
     for (i = 0; i < files.length; i++) {
-        readFile(files[i][0], files[i][1]);
+        readFile(fpath + files[i][0], files[i][1]);
     }
     for (i = 0; i < timefiles.length; i++) {
         readTime(tpath + timefiles[i][0], timefiles[i][1]);
@@ -114,24 +121,12 @@
                 <a class="item" data-tab="data">More Data</a>
                 <a class="item" data-tab="other">Other Resources</a>
             </div>
-            <div class="ui bottom attached tab segment active" data-tab="history" id='history'>
-                First
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="society" id='society'>
-                Second
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="revealing" id='revealing'>
-                Third
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="front" id='front'>
-                E
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="data" id='data'>
-                E
-            </div>
-            <div class="ui bottom attached tab segment" data-tab="other" id='other'>
-                E
-            </div>
+            <div class="ui bottom attached tab segment active" data-tab="history" id='history'></div>
+            <div class="ui bottom attached tab segment" data-tab="society" id='society'></div>
+            <div class="ui bottom attached tab segment" data-tab="revealing" id='revealing'> </div>
+            <div class="ui bottom attached tab segment" data-tab="front" id='front'></div>
+            <div class="ui bottom attached tab segment" data-tab="data" id='data'></div>
+            <div class="ui bottom attached tab segment" data-tab="other" id='other'></div>
         </div>
     </div>
     <div class="ui inverted vertical footer segment">

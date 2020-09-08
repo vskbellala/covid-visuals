@@ -1,17 +1,24 @@
-/* https:/codepen.io/NielsVoogt/pen/MbMMxv/ */
+/*
+https:/codepen.io/NielsVoogt/pen/MbMMxv/ 
+source of timeline styles
+*/
 
 img,
 table {
     width: 100%;
+    height: auto;
 }
 
 h6 {
     display: none;
 }
-hr{
+
+/*default styles for some unstyled elements*/
+hr {
     border: none;
     border-top: 1px solid rgba(222, 222, 223);
 }
+
 blockquote,
 q {
     padding: 1rem;
@@ -19,7 +26,7 @@ q {
     border-left: 4px solid rgba(118, 118, 118);
 }
 
-/*timeline stuff :0*/
+/*timeline stuff*/
 .timeline {
     margin: 0 auto;
 }
@@ -44,7 +51,6 @@ q {
     display: block;
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--nc-tx-1)
 }
 
 .timeline-item::after {
@@ -61,6 +67,9 @@ q {
 }
 
 .timeline-item:last-child {
-    border-image: linear-gradient(to bottom, rgba(0, 181, 173) 60%, rgba(0, 150, 136, 0)) 1 100%;
-    border-right:none;
+    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 181, 173)), to(rgba(0, 181, 173,0))) 1 100%;
+    -webkit-border-image: linear-gradient(to bottom, rgba(0, 181, 173) 60%, rgba(0, 181, 173,0)) 1 100%;
+    -o-border-image: linear-gradient(to bottom, rgba(0, 181, 173) 60%, rgba(0, 181, 173,0)) 1 100%;
+    border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 181, 173)), to(rgba(0, 181, 173,0))) 1 100%;
+    border-image: linear-gradient(to bottom, rgba(0, 181, 173) 60%, rgba(0, 181, 173,0)) 1 100%;
 }

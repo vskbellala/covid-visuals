@@ -9,9 +9,9 @@
     //Function for reading MD file
     function readFile(file, out) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath+file);
+        http.open('get', mpath + file);
         http.onreadystatechange = function() {
-            document.getElementById(out).innerHTML = marked(http.responseText); //.replace(/\n/g, '<br>'));
+            document.getElementById(out).innerHTML = marked(http.responseText); //conversion to html using marked.js + place html code into div
         };
         http.send();
     }
@@ -21,21 +21,24 @@
     const parseHTMLString = (() => {
         const parser = new DOMParser();
         return str => parser.parseFromString(str, "text/html");
-    })();
+    })(); // required for getting h6 headers from marked text
+
     //Function for reading MD file for timeline
     function readTime(file, out) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath+file);
+        http.open('get', mpath + file);
         http.onreadystatechange = function() {
             var mark = marked(http.responseText);
-            document.getElementById(out).innerHTML = mark; //.replace(/\n/g, '<br>'));
+            document.getElementById(out).innerHTML = mark; //conversion to html using marked.js + place html code into div
             var mhtml = parseHTMLString(mark);
             document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
+            // set 'date-is' attribute using the inner html of the h6 header
+            // h6 headers are set to display:none; in css
         };
         http.send();
     }
-    
-    
+
+
 
     // for easier plotly embeds
     $.fn.embed.settings.sources = {
