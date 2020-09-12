@@ -1,24 +1,23 @@
 import pandas as pd
 import plotly.graph_objects as go
 
-
 url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv' # historical COVID 19 data for US
 us_cases = pd.read_csv(url, parse_dates=['date'], usecols=['date','county','deaths', 'cases', 'state'], converters={'cases':float}) 
 # parse_dates formats the date column
 
 df = pd.DataFrame(us_cases) # extract and reverse only 3 specified columns
-#df['date'] = df['date'].dt.strftime('%B %d, %Y')
-#df['date'] = df['date'].astype('str')
+df['date'] = df['date'].astype('str')
 
 df_us = df.loc[(df['county'] == 'Harris') & (df['state'] == 'Texas')]
 df_us = df_us.reset_index(drop=True)
 
 fig1 = go.Figure(
-	frames=[go.Frame(
+    frames=[go.Frame(
         data=[go.Scatter(
             x=df_us['date'].loc[0:k],
             y=df_us['cases'].loc[0:k],
             ),
+
             go.Scatter(
             x=df_us['date'].loc[0:k],
             y=df_us['deaths'].loc[0:k],
@@ -26,28 +25,29 @@ fig1 = go.Figure(
 
         for k in range(0,len(df_us))] # Use list comprehension to populate each frame in the animation
 )
+
 fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['cases'],name="Cases", line=dict(color='#2adbcf'))) # pos case graph
 fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['deaths'],name="Deaths", line=dict(color='#218a83'))) # death graph
 fig1.update_traces(mode="lines") # change markers to a continuous line
 
-'''
-dateslist = []
-numlist = []
+
+dateslist = [df_us['date'][0]]
+numlist = [df_us['cases'][0]]
 textlist = []
 
-link = ''
-temp = pd.read_csv(link)
-df_KOW = pd.DataFrame(temp)
+link = 'event_lists/houston_sheet.csv'
+temp = pd.read_csv(link, parse_dates=['date'])
+df_events = pd.DataFrame(temp)
+df_events['date'] = df_events['date'].astype('str')
 
-for date in df_KOW['date']:
+for date in df_events['date']:
     dateslist.append(date)
     numlist.append(df_us.loc[df_us['date'] == date, 'cases'].item())
-    textlist.append(df_KOW.loc[df_KOW['date'] == date, 'events'].item())
-'''
+    textlist.append(df_events.loc[df_events['date'] == date, 'events'].item())
 
-dateslist = [df_us['date'][0], df_us['date'][56], df_us['date'][70], df_us['date'][100]]
-numlist = [df_us['cases'][0], df_us['cases'][56], df_us['cases'][70], df_us['cases'][100]]
-textlist = ['number 1', 'number 2', 'number 3']
+#dateslist = [df_us['date'][0], df_us['date'][56], df_us['date'][70], df_us['date'][100]]
+#numlist = [df_us['cases'][0], df_us['cases'][56], df_us['cases'][70], df_us['cases'][100]]
+#textlist = ['number 1', 'number 2', 'number 3']
 
 
 # Adds in markers to the plot
@@ -69,11 +69,11 @@ for i in range(0, len(fig1.frames)):
                     mode='markers+text',
                     hoverinfo='skip',
                     text=textlist[0:k],
-                    textposition='top left',
+                    textposition='top center',
                     textfont_size=10,
                     marker=dict(
-                        color='LightSkyBlue', 
-                        size=14,
+                        color='#ff0d6a', 
+                        size=10,
                         line=dict(
                             color='#2adbcf', 
                             width=2))),)
@@ -89,14 +89,15 @@ fig1.add_trace(go.Scatter(
             mode='markers+text', 
             hoverinfo='skip',
             text=textlist,
-            textposition='top left',
+            textposition='top center',
             textfont_size=10,
             marker=dict(
-                color='LightSkyBlue', 
-                size=14,
+                color='#ff0d6a', 
+                size=10,
                 line=dict(
                     color='#2adbcf', 
                     width=2))),)
+
 
 # animation configuration parameters
 a_opts = {"frame": {"duration": 0, "redraw": False}, "fromcurrent": True, "transition": {"duration": 300, "easing": "cubic-in"}}
@@ -128,16 +129,16 @@ fig1.update_layout(hovermode="x unified", # consistent hover
                                   "transition": {"duration": 0}}],
                 "label": "&#9724;",
                 "method": "animate"
-            }# pause button
+            } # pause button
         ]
 }])
 
 fig1.layout.updatemenus[0].pad.r = 15
 fig1.layout.updatemenus[0].pad.b = 15
 
+
 fig1.write_html(file="../../plots/covid_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts) # write figure to html
-
 
 '''
 animation_opts: dict or None (default None)
