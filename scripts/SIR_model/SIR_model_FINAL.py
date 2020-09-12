@@ -100,7 +100,7 @@ fig1.layout.updatemenus[0].pad.r = 15
 fig1.layout.updatemenus[0].pad.b = 15
 
 # fig1.update_layout(xaxis_type="log")
-fig1.write_html(file="../../plots/sir_covid.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
+fig1.write_html(file="../../docs/plots/sir_covid.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts
 
 ) # write figure to html

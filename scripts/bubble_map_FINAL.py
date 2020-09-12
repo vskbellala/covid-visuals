@@ -129,7 +129,7 @@ fig.update_traces(hovertemplate='<b>%{customdata[0]} County, %{customdata[1]}</b
 for frame in fig.frames:
     frame['data'][0].hovertemplate = '<b>%{customdata[0]} County, %{customdata[1]}</b><br>Date: %{customdata[3]}<br>Cases: %{marker.color}<extra></extra>'
 
-fig.write_html(file="../plots/bubble_map.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
+fig.write_html(file="../docs/plots/bubble_map.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts
 
 ) # write figure to html

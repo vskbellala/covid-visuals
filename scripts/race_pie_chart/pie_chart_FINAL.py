@@ -91,7 +91,7 @@ for frame in fig.frames:
 fig.layout.updatemenus[0].pad.r = 15
 fig.layout.updatemenus[0].pad.b = 15
 
-fig.write_html(file="../../plots/cases_pie.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
+fig.write_html(file="../../docs/plots/cases_pie.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts
 
 ) # write figure to html

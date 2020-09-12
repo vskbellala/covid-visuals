@@ -1,0 +1,7 @@
+## [These are the faces on the front lines of Chicago’s COVID-19 battle](https://www.chicagotribune.com/coronavirus/ct-corona-hospital-doctors-nurses-portraits-20200501-ypospcmmsrh5hiqvmmzmloiqxa-photogallery.html)  ||  5.01.20
+
+This story portrays the grim and bleak image that is the front lines of the battle against COVID-19. With patients, doctors and families being put in positions of incredible pain, the fight against the disease rages on. The commitment to the fight and the patients is highlighted throughout the article. Among the dark pictures of this fight, we see the true strength that everyone who risks their lives to help COVID-19 patients displays.
+
+## [How Anthony Fauci Became America’s Doctor](https://www.newyorker.com/magazine/2020/04/20/how-anthony-fauci-became-americas-doctor)  ||  4.20.20
+
+This article focuses on Dr. Fauci and how he has been a guiding force throughout the pandemic as well as his background. His journey to his current position is documented along with the opinions of many people who saw him along the way. The article continues to the present day where Fauci is currently attempting to control the spread of the disease. He mentions his biggest priority being to stop the worst from happening.

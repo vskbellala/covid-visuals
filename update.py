@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 
 '''
 Messy script for automagically updating each plot
@@ -10,7 +11,8 @@ graphs = {'region_bar':"bar_graph_FINAL.py",
 'bubble_chart':'bubble_chart_FINAL.py',
 'bubble_map':'bubble_map_FINAL.py',
 'deaths_heat':'heatmap_percapita_FINAL.py',
-'covid_lines':'line_graph_FINAL.py'
+'covid_lines':'line_graph_FINAL.py',
+'Statistics':'stats.py'
 }
 
 # loop for running python scripts without special dependencies
@@ -43,6 +45,30 @@ for spec in specg:
 	print('Resetting directory.')
 	sys.stdout.flush()
 	os.chdir('../')
+
+# Commands for city charts!
+
+cityg = ['chicago','houston','jacksonville','LA','nyc','portland']
+citydir = 'individual_cities'
+
+# Get to correct directory
+print('Navigating to directory {0}.'.format(citydir))
+sys.stdout.flush()
+os.chdir('{0}/'.format(citydir))
+
+for city in cityg:
+	print("Running '{0}' python script".format(city))
+	sys.stdout.flush()
+	os.system('py {0}.py'.format(city))
+	print('Completed successfully. Moving to next script.')
+
+
+print('updating last_update.md') # used for automagically updating the date of last update (aka when this script is ran)
+os.chdir('../../')
+date = datetime.datetime.now()
+f = open("docs/content/last_update.md", "w")
+f.write('**Last updated [{0}](https://github.com/vskbellala/covid-visuals/commits/master).**'.format(date.strftime('%m/%d/%Y')))
+f.close()
 
 print('All scripts ran.')
 
