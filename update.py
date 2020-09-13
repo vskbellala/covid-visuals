@@ -48,7 +48,7 @@ for spec in specg:
 
 # Commands for city charts!
 
-cityg = ['chicago','houston','jacksonville','LA','nyc','portland']
+cityg = ['chicago','houston','jacksonville','LA','nyc','seattle']
 citydir = 'individual_cities'
 
 # Get to correct directory

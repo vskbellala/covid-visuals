@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../assets/scripts.js"></script>
     <script>
@@ -27,33 +27,24 @@
                 .tab();
         });
     </script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 </head>
 
 <body>
     <script>
     // Files 2D Array
     // Structured ["Path String","Element ID"]
-    files = [
-        ['history.md', 'history'],
-        ['society.md', 'society'],
-        ['revealing.md', 'revealing'],
-        ['front.md', 'front'],
-        ['data.md', 'data'],
-        ['other.md', 'other'],
-        ['sources.md', 'sources']
-    ];
-    timefiles = [
-        ['test.md', 'E'],
-        ['test.md', 'C']
-    ];
+    files = ['history','society','revealing','front','data','other','sources'];
+    timefiles = ['January1','January17','January24','deaths_heat','January27','January30','January31'];
+    //timefiles=['test','test'];
     fpath = "pandemic/";
-    tpath = "";
+    tpath = "pandemic/timeline/";
     readFile('last_update.md', 'update');
     for (i = 0; i < files.length; i++) {
-        readFile(fpath + files[i][0], files[i][1]);
+        readFile(fpath + files[i] + '.md', files[i]);
     }
     for (i = 0; i < timefiles.length; i++) {
-        readTime(tpath + timefiles[i][0], timefiles[i][1]);
+        readTime(tpath,timefiles[i]);
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
@@ -71,7 +62,7 @@
                 <a class="item" href='../jacksonville/'>Jacksonville, FL</a>
                 <a class="item" href='../la/'>Los Angeles, CA</a>
                 <a class="item" href='../nyc/'>New York City, NY</a>
-                <a class="item" href='../portland/'>Portland, OR</a>
+                <a class="item" href='../seattle/'>Seattle, WA</a>
             </div>
         </div>
         <a class="item" href='../safe/'><i class="head side mask icon"></i>Staying Safe</a>
@@ -105,13 +96,7 @@
         <div class="ui text container basic segment" id='covid-blurb'>
             <p>placeholder text Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         </div>
-        <div class="timeline ui container vertical segment">
-            <div class='timeline-item' id="E"></div>
-            <div class='timeline-item' id="C"></div>
-            <div class='timeline-item' date-is='Visualization: COVID-19 Deaths'>
-                <div class="ui embed" data-source="plotly" data-id="deaths_heat" data-placeholder="../content/images/plotly_logo.webp"></div>
-            </div>
-        </div>
+        <div class="timeline ui container vertical segment" id='timeline'></div>
         <div class='ui container vertical segment' id='sources'></div>
         <div class='ui container vertical segment'>
             <h1>Further Reading</h1>
