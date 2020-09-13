@@ -30,13 +30,13 @@
 
 <body>
     <script>
-    // Files 2D Array
-    // Structured ["Path String","Element ID"]
-    files = ['history', 'society', 'revealing', 'front', 'data', 'other', 'sources'];
-    timefiles = ['January1', 'January17', 'January21', 'January24', 'deaths_heat', 'January27', 'January30', 'January31'];
-    fpath = "pandemic/";
-    tpath = "pandemic/timeline/";
     window.onload = function() {
+        // Files 2D Array
+        // Structured ["Path String","Element ID"]
+        files = ['history', 'society', 'revealing', 'front', 'data', 'other', 'sources'];
+        timefiles = ['January1', 'January17', 'January21', 'January24', 'deaths_heat', 'January27', 'January30', 'January31'];
+        fpath = "pandemic/";
+        tpath = "pandemic/timeline/";
         readFile('last_update.md', 'update');
         for (i = 0; i < files.length; i++) {
             readFile(fpath + files[i] + '.md', files[i]);

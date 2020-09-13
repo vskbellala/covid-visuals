@@ -9,7 +9,7 @@
     //Function for reading MD file
     function readFile(file, out) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath + file);
+        http.open('get', mpath + file,false);
         http.onload = function() {
             document.getElementById(out).innerHTML = marked(http.responseText); //conversion to html using marked.js + place html code into div
         };
@@ -26,7 +26,7 @@
     //Function for reading MD file for timeline
     function readTime(tpath, file) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath + tpath + file + ".md");
+        http.open('get', mpath + tpath + file + ".md",false);
         var code = "";
         http.onload = function() {
             var mark = marked(http.responseText);
