@@ -27,6 +27,7 @@
     function readTime(tpath, file) {
         var http = new XMLHttpRequest();
         http.open('get', mpath + tpath + file + ".md");
+        var code = "";
         http.onload = function() {
             var mark = marked(http.responseText);
             // document.getElementById(out).innerHTML = mark; //conversion to html using marked.js + place html code into div
@@ -34,23 +35,28 @@
             // document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
             var date = mhtml.querySelector("h6").innerHTML;
             var timeline = document.getElementById("timeline");
-            var newNode = document.createElement('div');
-            newNode.innerHTML = mark;
-            newNode.setAttribute('date-is', date);
-            newNode.setAttribute('class', 'timeline-item');
-            newNode.setAttribute('id', file);
-            timeline.appendChild(newNode);
+            var code = '<div class="timeline-item" date-is="' + date + '" id="' + file + '">' + mark + '</div>';
+            //data.push(code);
+            // var newNode = document.createElement('div');
+            // newNode.innerHTML = mark;
+            // newNode.setAttribute('date-is', date);
+            // newNode.setAttribute('class', 'timeline-item');
+            // newNode.setAttribute('id', file);
+            $('#timeline').append(code);
+            $('.ui.embed').embed();
+            // console.log(data);
+            // timeline.innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + file + '">' + mark + '</div>';
         };
-        http.send();
-
-        // http.onreadystatechange = function() {
-        //     console.log(data);
-
-        //    //document.getElementById("timeline").innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + out + '">' + mark + '</div>'
-        //     // set 'date-is' attribute using the inner html of the h6 header
-        //     // h6 headers are set to display:none; in css
-        // };
+        http.send();  
     }
+    // http.onreadystatechange = function() {
+    //     console.log(data);
+
+    //    //document.getElementById("timeline").innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + out + '">' + mark + '</div>'
+    //     // set 'date-is' attribute using the inner html of the h6 header
+    //     // h6 headers are set to display:none; in css
+    // };
+
 
 
 
