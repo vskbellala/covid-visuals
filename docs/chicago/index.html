@@ -29,16 +29,15 @@
 
 <body>
     <script>
-    // Files 2D Array
-    // Structured ["Path String","Element ID"]
-    readFile('last_update.md', 'update');
-    files = [
-        ['test.md', 'E'],
-        ['test.md', 'C']
-    ];
-
-    for (i = 0; i < files.length; i++) {
-        readTime(files[i][0], files[i][1]);
+    window.onload = function() {
+        // Files 2D Array
+        // Structured ["Path String","Element ID"]
+        timefiles = [];
+        tpath = "";
+        readFile('last_update.md', 'update');
+        // for (i = 0; i < timefiles.length; i++) {
+        //     readTime(tpath, timefiles[i]);
+        // }
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
