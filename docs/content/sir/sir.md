@@ -6,11 +6,11 @@ The SIR model is an epidemiological model used to present the movement of diseas
 - `I` represents individuals who are infected with the disease at a given moment in time.
 - `R` represents individuals who either recovered or succumbed to the disease.
 
-For educational purposes, we are presenting a **simplified** version of this model using COVID-19 as an example to demonstrate how diseases can spread. In actuality, the intricacies of the real world often require highly complex models which account for population changes (births, deaths, immigration, or emigration) and people who are naturally immune to COVID-19. Therefore, we must hold some assumptions as we cannot analyze all factors available.
+For educational purposes, we are presenting a **simplified** version of this model using COVID-19 as an example to demonstrate how diseases can spread. In actuality, the intricacies of the real world often require highly complex models which account for population changes (births, deaths, immigration, or emigration) and people who are naturally immune to the disease. Therefore, we must hold some assumptions as we cannot analyze all factors available.
 
 Some assumptions we will hold are:
 
-- When an individual enters the `R` state, they become *immune* to COVID-19 (no one dies).
+- When an individual enters the `R` compartment, they become *immune* to the disease (no one dies).
 - The total population will be *constant*. We will use the population of the United States as of **01/28/2020**: 329,227,746.
 
 Now, we can begin dissecting our SIR model.
@@ -39,9 +39,20 @@ Since our value for `k` is constantly changing, for the purpose of this example,
 
 If we begin with 1 infection, by the time the first individual is recovered, there are on average **2.5** new infected individuals out there spreading the disease. When this batch of people recovers, there are an additional **6.25** people on average infecting others. This growth is why we observe an immediate uptick in positive cases. **Social distancing** measures slow down this exponential growth, as the `b` value decreases when interactions with others decrease.
 
-### NEXST
- 
-The assumption that anyone that is recovered is immune and alive allows us to see the impact of the number of people who are recovered increasing. For the beginning of the hypothetical model, the vast majority of people that infected people meet are people who have not yet been exposed. This begins to change once most people have recovered. The odds of exposing a person who has not recovered from the disease gets lower and lower since there are less people who are in the S phase as time progresses. The fraction of infectable people in the population gets lower and lower. We can call this fraction F as a placeholder. We can calculate the effective amount of people getting infected at any point of time by multiplying V and F. We can call this new variable W. Once W is equal to one, the disease stops growing and this is where we see the peak in the number of infected people. From then on W only goes down as we see the infections peter out. In our graph by the time we see a flatline in the amount of infected people, 80% of the people in the population who have been exposed are now recovered. 
+### Movement of Disease
 
-The problem with this model is that real life is messy and the population of a group is always variable with new people being born and people dying as a result of the disease or other causes. The model we present to you can only give you a simple idea of the way diseases spread, but in reality the disease would not flatline like we see in the graph due to these variations. One more thing that this model can show you is the concept of herd immunity. The lower the value of F goes over time, the harder it is for the disease to spread. Once the majority of the population is immune the disease has almost completely vanished. This highlights the importance of vaccinations in society. By getting vaccinated we can make the world safer for those who can’t get vaccinated due to health complications. We hope that looking at this model and reading this page has helped you understand a little more about how diseases such as COVID-19 spread on a basic level. If you want to learn more about how this model works you can look at any of the following resources. 
+By assuming that anyone entering the `R` compartment is *immune* to the disease and *alive* enables us to observe how an increasing amount of recovered individuals impacts the spread of disease. At the beginning of this model, the vast majority of people that infected individuals meet are people who have not yet been exposed. However, this begins to change once most individuals have recovered. When individuals recover, they enter the `R` compartment and **leave** the `S` compartment. The odds of exposing a person who has not recovered from the disease decreases greatly because there are **fewer** people who are in the `S` compartment as time progresses. The proportion of susceptible individuals in the population **decreases**.
 
+Let us call this proportion `F` as a placeholder. We can calculate the effective amount of people being infected at any point of time by multiplying `V` and `F`. Let this value be represented by the variable `W`. When `W` is equal to **1**, the rate of infection stops growing, and here we can also observe a peak in the count of infected individuals. Afterwards, `W` only decreases, and the rate of infection peters out. In our model, when the count of infected individuals stabilizes, we can noticed that **80%** of exposed population are now *recovered*. 
+
+***
+
+## Conclusion
+
+The primary drawback of the SIR model is that real life is significantly more complex and contains factors that it cannot account for. A population is always variable: new people are being born and people are dying as a result of the disease or other causes. The model we have presented today is a heavily simplified representation of how diseases spread. We would not observe a flat-line due to these confounding variables.
+
+This model also demonstrates the concept of **herd immunity**. As `F` decreases over time, it is difficult for a disease to spread among a population. Once the majority of a population is immune, the disease has almost completely vanished. This highlights the importance of vaccinations. By being vaccinated, we can make the world safer for those who are unable to be vaccinated due to health complications.
+
+We hope this page has helped you understand at least a little more about how diseases such as COVID-19 spread on a basic level. If you want to learn more about how this model works, take a look at the following resources.
+
+- [Epidemic, Endemic, and Eradication Simulations](https://www.youtube.com/watch?v=7OLpKqTriio)
