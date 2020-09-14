@@ -15,3 +15,5 @@
 13. https://www.justsecurity.org/69650/timeline-of-the-coronavirus-pandemic-and-u-s-response/
 14. https://www.bbc.com/news/world-us-canada-53493028
 15. https://www.washingtonpost.com/politics/2020/04/07/timeline-trumps-coronavirus-response-is-increasingly-damning/
+16. https://www.infoplease.com/may-2020-current-events-us-news
+17. https://www.infoplease.com/april-2020-current-events-us-news
