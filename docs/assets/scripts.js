@@ -26,8 +26,7 @@
     //Function for reading MD file for timeline
     function readTime(tpath, file) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath + tpath + file + ".md",false);
-        var code = "";
+        http.open('get', mpath + tpath + file + ".md", false);
         http.onload = function() {
             var mark = marked(http.responseText);
             // document.getElementById(out).innerHTML = mark; //conversion to html using marked.js + place html code into div
@@ -42,14 +41,14 @@
             newNode.setAttribute('date-is', date);
             newNode.setAttribute('class', 'timeline-item');
             newNode.setAttribute('id', file);
-            newNode.setAttribute('data-aos',"fade-up");
-            newNode.setAttribute('data-aos-anchor-placement',"center-bottom");
+            newNode.setAttribute('data-aos', "fade-up");
+            newNode.setAttribute('data-aos-anchor-placement', "center-bottom");
             $('#timeline').append(newNode);
             $('.ui.embed').embed();
             // console.log(data);
             // timeline.innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + file + '">' + mark + '</div>';
         };
-        http.send();  
+        http.send();
     }
     // http.onreadystatechange = function() {
     //     console.log(data);
