@@ -11,8 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../assets/scripts.js"></script>
+    <script src="../content/pandemic/timefiles.js"></script>
     <script>
         $(document)
         .ready(function() {
@@ -25,7 +29,7 @@
             $('.ui.embed').embed();
         });
     </script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    
 </head>
 
 <body>
@@ -34,23 +38,6 @@
         // Files 2D Array
         // Structured ["Path String","Element ID"]
         files = ['history', 'society', 'revealing', 'front', 'data', 'other', 'sources'];
-        timefiles = [
-            'January1', 'January17', 'January21', 'January24',
-            'deaths_heat', 'January27', 'January30', 'January31',
-            'February2', 'February5', 'February7', 'February12',
-            'February15', 'February24', 'February25', 'February29',
-            'March3', 'March4', 'March6', 'March13', 'March17',
-            'March18', 'March19', 'March20', 'March27', 'March28',
-            'March29', 'April3', 'April4', 'April5', 'April16',
-            'April17', 'April21', 'April23', 'April24', 'April26',
-            'April27', 'April29', 'April30',
-            'bubble_chart',
-            'bubble_map',
-            'cases_pie',
-            'covid_lines',
-            'deaths_heat',
-            'region_bar'
-        ];
         fpath = "pandemic/";
         tpath = "pandemic/timeline/";
         readFile('last_update.md', 'update');
@@ -60,6 +47,7 @@
         for (i = 0; i < timefiles.length; i++) {
             readTime(tpath, timefiles[i]);
         }
+        AOS.init();
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
@@ -138,6 +126,9 @@
                     <strong>Made with <a href="https://bellala.org"><span class='ui red text'><i class="heart icon"></i></span></a>and <a href="https://fomantic-ui.com/">Fomantic-UI</a>.</strong>
                 </div>
                 <div class='item' id='update'></div>
+                <div class='item'>
+                    <strong>Plot placeholder by <a href="https://pixabay.com/users/janjf93-3084263/">janjf93</a> from <a href="https://pixabay.com/">Pixabay</a>.</strong>
+                </div>
             </div>
         </div>
     </div>
