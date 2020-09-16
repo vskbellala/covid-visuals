@@ -24,7 +24,7 @@ If you experience any of the following emergency warning signs of COVID-19, seek
 
 ![](https://image.freepik.com/free-vector/emergency-word-concept-background_23-2147957318.jpg)
 
-## Taking Precuations
+## Taking Precautions
 
 Protect yourself and others by following these steps [[1]](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/index.html).
 

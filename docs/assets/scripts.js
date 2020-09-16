@@ -9,7 +9,7 @@
     //Function for reading MD file
     function readFile(file, out) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath + file);
+        http.open('get', mpath + file); // get correct .md file
         http.onload = function() {
             document.getElementById(out).innerHTML = marked(http.responseText); //conversion to html using marked.js + place html code into div
         };
@@ -23,42 +23,26 @@
         return str => parser.parseFromString(str, "text/html");
     })(); // required for getting h6 headers from marked text
 
-    //Function for reading MD file for timeline
+    //Function for reading MD file for timeline + dynamic timeline construction
     function readTime(tpath, file) {
         var http = new XMLHttpRequest();
-        http.open('get', mpath + tpath + file + ".md", false);
+        http.open('get', mpath + tpath + file + ".md", false); // download correct .md file
         http.onload = function() {
-            var mark = marked(http.responseText);
-            // document.getElementById(out).innerHTML = mark; //conversion to html using marked.js + place html code into div
+            var mark = marked(http.responseText); // convert .md file into html
             var mhtml = parseHTMLString(mark);
-            // document.getElementById(out).setAttribute("date-is", mhtml.querySelector("h6").innerHTML);
-            var date = mhtml.querySelector("h6").innerHTML;
-            var timeline = document.getElementById("timeline");
-            // var code = '<div class="timeline-item" date-is="' + date + '" id="' + file + '">' + mark + '</div>';
-            //data.push(code);
-            var newNode = document.createElement('div');
+            var date = mhtml.querySelector("h6").innerHTML; // get entry date
+            var timeline = document.getElementById("timeline"); // find #timeline
+            var newNode = document.createElement('div'); // build timeline entry div with styling, content, and animations
             newNode.innerHTML = mark;
             newNode.setAttribute('date-is', date);
             newNode.setAttribute('class', 'timeline-item');
             newNode.setAttribute('id', file);
             newNode.setAttribute('data-aos', "fade-up");
             newNode.setAttribute('data-aos-anchor-placement', "center-bottom");
-            $('#timeline').append(newNode);
-            $('.ui.embed').embed();
-            // console.log(data);
-            // timeline.innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + file + '">' + mark + '</div>';
+            $('#timeline').append(newNode); // append new timeline entry to bottom of the #timeline
         };
-        http.send();
+        http.send(); // send changes
     }
-    // http.onreadystatechange = function() {
-    //     console.log(data);
-
-    //    //document.getElementById("timeline").innerHTML += '<div class="timeline-item" date-is="' + date + '" id="' + out + '">' + mark + '</div>'
-    //     // set 'date-is' attribute using the inner html of the h6 header
-    //     // h6 headers are set to display:none; in css
-    // };
-
-
 
 
     // for easier plotly embeds

@@ -18,18 +18,15 @@
     <script src="../assets/scripts.js"></script>
     <script src="../content/pandemic/timefiles.js"></script>
     <script>
-        $(document)
+    $(document)
         .ready(function() {
-
             // create sidebar and attach to menu open
             $('.ui.sidebar')
                 .sidebar('attach events', '.toc.item');
             $('.menu .item')
-                    .tab();
-            $('.ui.embed').embed();
+                .tab();
         });
     </script>
-    
 </head>
 
 <body>
@@ -47,6 +44,7 @@
         for (i = 0; i < timefiles.length; i++) {
             readTime(tpath, timefiles[i]);
         }
+        $('.ui.embed').embed();
         AOS.init();
     }
     </script>
