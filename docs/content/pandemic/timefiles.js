@@ -85,5 +85,5 @@ var timefiles = [
     'August27',
     'August28',
     'August31',
-    'September 1'
+    'September1'
 ];
