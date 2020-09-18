@@ -17,3 +17,4 @@
 15. https://www.washingtonpost.com/politics/2020/04/07/timeline-trumps-coronavirus-response-is-increasingly-damning/
 16. https://www.infoplease.com/may-2020-current-events-us-news
 17. https://www.infoplease.com/april-2020-current-events-us-news
+18. https://www.infoplease.com/august-2020-current-events-us-news
