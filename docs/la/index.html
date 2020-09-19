@@ -40,6 +40,8 @@
         // for (i = 0; i < timefiles.length; i++) {
         //     readTime(tpath, timefiles[i]);
         // }
+        // document.getElementById("loading").remove();
+        // AOS.init();
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
@@ -90,6 +92,9 @@
         </div>
         <div class="ui container basic segment">
             <div class="ui embed" data-source="plotly" data-id="la_lines" data-placeholder="../content/images/plotly_logo.webp"></div>
+        </div>
+        <div class='ui center aligned container basic segment' id='loading'>
+            <i class="big spinner loading icon"></i>
         </div>
         <div class="timeline ui text container vertical segment">
             <div class='timeline-item' id="E"></div>
