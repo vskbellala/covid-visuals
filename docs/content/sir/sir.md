@@ -25,7 +25,7 @@ Before you even begin to decipher the plot above, let us learn about two essenti
 
 `k` represents the fraction (proportion) of infected individuals that recover every day. Taking the reciprocal of this value (`1/k`) results in the time an infection takes to run its course. After this time period, the individual enters the `R` compartment of the SIR model.
 
-The k value we used in our model is based on real time COVID-19 data is, therefore, constantly changing. **ADD BLURB ON HOW WE CALCULATED K**
+The k value we used in our model is based on real time COVID-19 data is, therefore, constantly changing. A singular k value is calculated by dividing the number of recovered people on any given day by the number of positive cases on the previous day. Using this methodology, we calculated k values for all of the dates available in the data, then averaged all of them to find the k value for the current day.
 
 ### The `b` Value
 
