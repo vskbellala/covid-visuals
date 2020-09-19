@@ -4,7 +4,7 @@
     });
 
     //Master Path for MD content
-    let mpath = 'https://bellala.org/covid-visuals/content/';
+    let mpath = 'https://covid-visuals.netlify.app/content/';
 
     //Function for reading MD file
     function readFile(file, out) {
