@@ -67,10 +67,10 @@ fig.update_layout(
         ]
 }],
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
-    plot_bgcolor='#f8f9fb', # Background color of plot
+    paper_bgcolor='#ffffff', # Background color of whole thing
+    plot_bgcolor='#ffffff', # Background color of plot
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=12, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ))

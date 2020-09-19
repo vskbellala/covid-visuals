@@ -63,7 +63,7 @@ fig.update_layout(
     xaxis_showgrid=False,
     yaxis_showgrid=False,
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=10, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ),
@@ -76,8 +76,8 @@ fig.update_layout(
             )
         ),
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
-    plot_bgcolor='#f8f9fb', # Background color of plot
+    paper_bgcolor='#ffffff', # Background color of whole thing
+    plot_bgcolor='#ffffff', # Background color of plot
     xaxis=dict(
         showline=False
         ),
@@ -103,7 +103,7 @@ for frame in fig.frames:
     frame['data'][0].hovertemplate = '<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Total Tests: %{marker.color}<br>Positive Tests: %{customdata[1]}<br>Deaths: %{customdata[2]}<extra></extra>'
 
 fig.layout.updatemenus[0].showactive = True
-fig.layout.sliders[0].tickcolor = '#f8f9fb' # Blends ticks in with background
+fig.layout.sliders[0].tickcolor = '#ffffff' # Blends ticks in with background
 fig.layout.coloraxis.colorbar.title.font.size=15
 
 fig.write_html(file="../docs/plots/bubble_chart.html",auto_play=True,full_html=False,include_plotlyjs='cdn',

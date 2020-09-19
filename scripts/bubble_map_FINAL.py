@@ -100,10 +100,10 @@ fig.update_layout(
             )
         ),
     geo=dict(
-        bgcolor='#f8f9fb' # Background color of map
+        bgcolor='#ffffff' # Background color of map
         ),
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=10, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ),
@@ -114,14 +114,14 @@ fig.update_layout(
             )
         ),
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
+    paper_bgcolor='#ffffff', # Background color of whole thing
 	)
 
 fig.layout.sliders[0].currentvalue['prefix'] = 'Date: '
 # Reformats the "Date" on the slider
 
 fig.layout.updatemenus[0].showactive = True
-fig.layout.sliders[0].tickcolor = '#f8f9fb' # Blends ticks in with background
+fig.layout.sliders[0].tickcolor = '#ffffff' # Blends ticks in with background
 fig.layout.coloraxis.colorbar.title.font.size=15
 
 

@@ -60,10 +60,10 @@ fig.update_layout(
         projection=go.layout.geo.Projection(type='albers usa'),
         showlakes=False,
         lakecolor='rgb(255, 255, 255)',
-        bgcolor='#f8f9fb' # Background color of map
+        bgcolor='#ffffff' # Background color of map
         ),
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=10, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ),
@@ -79,7 +79,7 @@ fig.update_layout(
             )
         ),
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
+    paper_bgcolor='#ffffff', # Background color of whole thing
     annotations=[dict(
         text='*Per 1 Million People',
         showarrow=False,
@@ -105,7 +105,7 @@ for frame in fig.frames:
     frame['data'][0].hovertemplate = '<b>%{hovertext}</b><br>Date: %{customdata[0]}<br>Deaths*: %{customdata[1]}<extra></extra>'
 
 fig.layout.updatemenus[0].showactive = True
-fig.layout.sliders[0].tickcolor = '#f8f9fb'  # Blends ticks in with background
+fig.layout.sliders[0].tickcolor = '#ffffff'  # Blends ticks in with background
 fig.layout.coloraxis.colorbar.title.font.size = 15
 
 fig.write_html(file="../docs/plots/deaths_heat.html",auto_play=True,full_html=False,include_plotlyjs='cdn',

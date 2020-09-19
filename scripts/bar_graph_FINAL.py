@@ -75,10 +75,10 @@ fig.update_layout(
     yaxis_title="New Cases",
     title="COVID-19 US Daily New Cases",
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
-    plot_bgcolor='#f8f9fb', # Background color of plot
+    paper_bgcolor='#ffffff', # Background color of whole thing
+    plot_bgcolor='#ffffff', # Background color of plot
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=12, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ),
@@ -101,7 +101,7 @@ fig.layout.sliders[0].currentvalue['prefix'] = 'Date: '
 # Reformats the "Date" on the slider
 
 fig.layout.updatemenus[0].showactive = True
-fig.layout.sliders[0].tickcolor = '#f8f9fb'  # Blends ticks in with background
+fig.layout.sliders[0].tickcolor = '#ffffff'  # Blends ticks in with background
 
 fig.write_html(file="../docs/plots/region_bar.html",auto_play=True,full_html=False,include_plotlyjs='cdn')
 # write figure to html

@@ -66,16 +66,16 @@ a_opts = {"frame": {"duration": 0, "redraw": False},
                                                                     "easing": "cubic-in"}}
 
 fig1.update_layout(hovermode="x unified",
-    xaxis=dict(linecolor='#f8f9fb'),
-    yaxis=dict(gridcolor='#e8e8e8', linecolor='#f8f9fb'),
+    xaxis=dict(linecolor='#ffffff'),
+    yaxis=dict(gridcolor='#e8e8e8', linecolor='#ffffff'),
     xaxis_title="Days",
     yaxis_title="Fraction of US Population",
     title="COVID-19 SIR Model",
     font_family='Rockwell', # Font for plot
-    paper_bgcolor='#f8f9fb', # Background color of whole thing
-    plot_bgcolor='#f8f9fb', # Background color of plot
+    paper_bgcolor='#ffffff', # Background color of whole thing
+    plot_bgcolor='#ffffff', # Background color of plot
     hoverlabel=dict(
-        bgcolor='#f8f9fb', # Background color of hoverlabel
+        bgcolor='#ffffff', # Background color of hoverlabel
         font_size=12, # Font size for hoverlabel
         font_family='Rockwell' # Font for hoverlabel
         ),
