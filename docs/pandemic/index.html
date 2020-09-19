@@ -45,6 +45,7 @@
             readTime(tpath, timefiles[i]);
         }
         $('.ui.embed').embed();
+        document.getElementById("loading").remove();
         AOS.init();
     }
     </script>
@@ -83,7 +84,7 @@
         <div class="ui container basic segment">
             <div class="ui large secondary text menu">
                 <div class='toc item'>
-                    <div class="ui teal  icon button"><i class="sidebar icon"></i></div>
+                    <div class="ui teal icon button"><i class="sidebar icon"></i></div>
                 </div>
                 <div class='header item'>🦠 covid-visuals</div>
             </div>
@@ -96,6 +97,9 @@
         </div>
         <div class="ui text container basic segment" id='covid-blurb'>
             <p>placeholder text Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+        <div class='ui center aligned container basic segment' id='loading'>
+            <i class="big spinner loading icon"></i>
         </div>
         <div class="timeline ui container vertical segment" id='timeline'></div>
         <div class='ui container vertical segment' id='sources'></div>
