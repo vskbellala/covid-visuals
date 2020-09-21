@@ -1,14 +1,14 @@
 date,events
-2020-03-07,<a href="https://plot.ly/">1</a>
-2020-03-08,<a href="https://plot.ly/">2</a>
-2020-03-12,<a href="https://plot.ly/">3</a>
-2020-03-16,<a href="https://plot.ly/">4</a>
-2020-03-17,<a href="https://plot.ly/">5</a>
-2020-03-20,<a href="https://plot.ly/">6</a> <a href="https://plot.ly/">7</a>
-2020-03-30,<a href="https://plot.ly/">8</a>
-2020-04-01,<a href="https://plot.ly/">9</a>
-2020-04-14,<a href="https://plot.ly/">10</a>
-2020-04-22,<a href="https://plot.ly/">11</a>
-2020-06-01,<a href="https://plot.ly/">12</a>
-2020-06-08,<a href="https://plot.ly/">13</a>
-2020-06-24,<a href="https://plot.ly/">14</a>
+2020-03-07,<a href="#March7">1</a>
+2020-03-08,<a href="#March8">2</a>
+2020-03-12,<a href="#March12">3</a>
+2020-03-16,<a href="#March16">4</a>
+2020-03-17,<a href="#March17">5</a>
+2020-03-20,<a href="#March20">6, 7</a>
+2020-03-30,<a href="#March30">8</a>
+2020-04-01,<a href="#April1">9</a>
+2020-04-14,<a href="#April14">10</a>
+2020-04-22,<a href="#April22">11</a>
+2020-06-01,<a href="#June1">12</a>
+2020-06-08,<a href="#June8">13</a>
+2020-06-24,<a href="#June24">14</a>
