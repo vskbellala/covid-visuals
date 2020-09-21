@@ -1,13 +1,13 @@
 date,events
-2020-02-29,<a href="https://plot.ly/">1</a>
-2020-03-03,<a href="https://plot.ly/">2</a>
-2020-03-04,<a href="https://plot.ly/">3</a>
-2020-03-13,<a href="https://plot.ly/">4</a> <a href="https://plot.ly/">5</a>
-2020-03-16,<a href="https://plot.ly/">6</a>
-2020-03-23,<a href="https://plot.ly/">7</a>
-2020-04-05,<a href="https://plot.ly/">8</a>
-2020-04-19,<a href="https://plot.ly/">9</a>
-2020-05-01,<a href="https://plot.ly/">10</a>
-2020-05-29,<a href="https://plot.ly/">11</a>
-2020-06-01,<a href="https://plot.ly/">12</a>
-2020-06-19,<a href="https://plot.ly/">13</a>
+2020-02-29,<a href="#February29">1</a>
+2020-03-03,<a href="#March3">2</a>
+2020-03-04,<a href="#March4">3</a>
+2020-03-13,<a href="#March13">4, 5</a>
+2020-03-16,<a href="#March16">6</a>
+2020-03-23,<a href="#March23">7</a>
+2020-04-05,<a href="#April5">8</a>
+2020-04-19,<a href="#April19">9</a>
+2020-05-01,<a href="#May1">10</a>
+2020-05-29,<a href="#May29">11</a>
+2020-06-01,<a href="#June1">12</a>
+2020-06-19,<a href="#June19">13</a>
