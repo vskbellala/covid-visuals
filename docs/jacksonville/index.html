@@ -24,32 +24,29 @@
             // create sidebar and attach to menu open
             $('.ui.sidebar')
                 .sidebar('attach events', '.toc.item');
-                 $('.ui.embed').embed();
         });
-
     </script>
 </head>
 
 <body>
     <script>
-
-    // window.onload = function() {
-    //     // Files 2D Array
-    //     // Structured ["Path String","Element ID"]
-    //     files = ['analysis', 'sources'];
-    //     fpath = "jacksonville/";
-    //     tpath = "jacksonville/timeline/";
-    //     readFile('last_update.md', 'update');
-    //     for (i = 0; i < files.length; i++) {
-    //         readFile(fpath + files[i] + '.md', files[i]);
-    //     }
-    //     for (i = 0; i < timefiles.length; i++) {
-    //         readTime(tpath, timefiles[i]);
-    //     }
-    //     $('.ui.embed').embed();
-    //     document.getElementById("loading").remove();
-    //     AOS.init();
-    // }
+    window.onload = function() {
+        // Files 2D Array
+        // Structured ["Path String","Element ID"]
+        files = ['analysis', 'sources'];
+        fpath = "jacksonville/";
+        tpath = "jacksonville/timeline/";
+        readFile('last_update.md', 'update');
+        for (i = 0; i < files.length; i++) {
+            readFile(fpath + files[i] + '.md', files[i]);
+        }
+        for (i = 0; i < timefiles.length; i++) {
+            readTime(tpath, timefiles[i]);
+        }
+        $('.ui.embed').embed();
+        document.getElementById("loading").remove();
+        AOS.init();
+    }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
         <a class="item" href="..">
@@ -86,7 +83,7 @@
         <div class="ui container basic segment">
             <div class="ui large secondary text menu">
                 <div class='toc item'>
-                    <div class="ui teal icon button"><i class="sidebar icon"></i></div>
+                    <div class="ui teal  icon button"><i class="sidebar icon"></i></div>
                 </div>
                 <div class='header item'>🦠 covid-visuals</div>
             </div>
@@ -104,8 +101,8 @@
             <i class="big spinner loading icon"></i>
         </div>
         <div class="timeline ui text container vertical segment" id='timeline'></div>
-        <div class='ui text container vertical segment' id='analysis'>oogabooga</div>
-        <div class='ui text container vertical segment' id='sources'></div>
+        <div class='ui container vertical segment' id='analysis'></div>
+        <div class='ui container vertical segment' id='sources'></div>
     </div>
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
