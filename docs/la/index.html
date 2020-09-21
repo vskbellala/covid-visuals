@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../assets/scripts.js"></script>
+    <script src="../content/la/timefiles.js"></script>
     <script>
     $(document)
         .ready(function() {
@@ -23,25 +24,28 @@
             // create sidebar and attach to menu open
             $('.ui.sidebar')
                 .sidebar('attach events', '.toc.item');
-
-            $('.ui.embed').embed();
         });
     </script>
 </head>
 
 <body>
-   <script>
+    <script>
     window.onload = function() {
         // Files 2D Array
         // Structured ["Path String","Element ID"]
-        timefiles = [];
-        tpath = "";
+        files = ['analysis', 'sources'];
+        fpath = "la/";
+        tpath = "la/timeline/";
         readFile('last_update.md', 'update');
-        // for (i = 0; i < timefiles.length; i++) {
-        //     readTime(tpath, timefiles[i]);
-        // }
-        // document.getElementById("loading").remove();
-        // AOS.init();
+        for (i = 0; i < files.length; i++) {
+            readFile(fpath + files[i] + '.md', files[i]);
+        }
+        for (i = 0; i < timefiles.length; i++) {
+            readTime(tpath, timefiles[i]);
+        }
+        $('.ui.embed').embed();
+        document.getElementById("loading").remove();
+        AOS.init();
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
@@ -96,13 +100,9 @@
         <div class='ui center aligned container basic segment' id='loading'>
             <i class="big spinner loading icon"></i>
         </div>
-        <div class="timeline ui text container vertical segment">
-            <div class='timeline-item' id="E"></div>
-            <div class='timeline-item' id="C"></div>
-            <div class='timeline-item' date-is='ameya gharpure'>
-                i like timeline
-            </div>
-        </div>
+        <div class="timeline ui text container vertical segment" id='timeline'></div>
+        <div class='ui text container vertical segment' id='analysis'></div>
+        <div class='ui text container vertical segment' id='sources'></div>
     </div>
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
