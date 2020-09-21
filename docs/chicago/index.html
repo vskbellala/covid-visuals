@@ -24,6 +24,7 @@
             // create sidebar and attach to menu open
             $('.ui.sidebar')
                 .sidebar('attach events', '.toc.item');
+            $('.ui.embed').embed();
         });
     </script>
 </head>
@@ -43,7 +44,6 @@
         for (i = 0; i < timefiles.length; i++) {
             readTime(tpath, timefiles[i]);
         }
-        $('.ui.embed').embed();
         document.getElementById("loading").remove();
         AOS.init();
     }
