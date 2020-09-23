@@ -2,10 +2,12 @@
 https:/codepen.io/NielsVoogt/pen/MbMMxv/ 
 source of timeline styles
 */
-
+img {
+    width: 100%;
+    height: auto;
+}
 .timeline-item img {
     width: 50%;
-    height: auto;
     margin-top: 1rem;
 }
 .timeline-item .ui.embed {
