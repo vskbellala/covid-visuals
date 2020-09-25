@@ -4,14 +4,14 @@
 
 [covid-visuals](https://covid-visuals.netlify.app/) is a website documenting the spread of COVID-19 and its impacts on the United States through custom visuals and a timeline of major events.
 
-![covid-visuals front page](https://covid-visuals.netlify.app/content/images/cv_screen.png)
+![covid-visuals front page](docs/content/images/cv_screen.png)
 
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
 - [Screenshots](#screenshots)
-- [Contributing]()
+- [Contributing](#contributing)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 
@@ -38,7 +38,13 @@ $ cd docs/plots/
 - Navigate to `docs/plots/` and open a plot's HTML file to view them in the browser!
 
 ## Screenshots
-Coming soon!
+![Demo page title, blurb, and menu header](docs/content/images/safety.png)
+![Sidebar focused](docs/content/images/sidebar_zoom.png)
+![Sidebar pushing the page to reveal itself](docs/content/images/sidebar_push.png)
+![Line plot for cases and deaths vs time](docs/content/images/case_plot.png)
+![Sample timeline entry](docs/content/images/timeline_text.png)
+![Plot in timeline, before launching](docs/content/images/timeline_before_play.png)
+![Plot in timeline, after launching](docs/content/images/timeline_after_play.png)
 
 ## Contributing
 We are not open to contributing at this time, but if you have any suggestions or comments, let us know by opening a [GitHub Issue](https://github.com/vskbellala/covid-visuals/issues).
