@@ -1,4 +1,4 @@
-###### August 29
+###### **(6)** August 29
 
 ### Majority of School Districts Open for In-Person Learning 
 

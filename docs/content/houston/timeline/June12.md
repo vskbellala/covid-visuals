@@ -1,4 +1,4 @@
-###### June 12
+###### **(9)** June 12
 
 ### Rest of Houston Opens
 
