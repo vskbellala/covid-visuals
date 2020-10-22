@@ -38,10 +38,12 @@ $ cd docs/plots/
 - Navigate to `docs/plots/` and open a plot's HTML file to view them in the browser!
 
 ## Screenshots
+### Pages
 ![Demo page title, blurb, and menu header](docs/content/images/safety.png)
 ![Sidebar focused](docs/content/images/sidebar_zoom.png)
 ![Sidebar pushing the page to reveal itself](docs/content/images/sidebar_push.png)
 ![Line plot for cases and deaths vs time](docs/content/images/case_plot.png)
+### Timeline
 ![Sample timeline entry](docs/content/images/timeline_text.png)
 ![Plot in timeline, before launching](docs/content/images/timeline_before_play.png)
 ![Plot in timeline, after launching](docs/content/images/timeline_after_play.png)
