@@ -1,4 +1,4 @@
-###### **(15)** July 26
+###### (15) July 26
 
 ### Resturants Flagged for Violations
 

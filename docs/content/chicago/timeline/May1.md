@@ -1,4 +1,4 @@
-###### **(8)** May 1
+###### (8) May 1
 
 ### Protests Against Stay-At-Home Order
 

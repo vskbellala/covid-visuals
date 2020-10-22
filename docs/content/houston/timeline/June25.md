@@ -1,4 +1,4 @@
-###### **(10)** June 25
+###### (10) June 25
 
 ### Reopening Paused
 

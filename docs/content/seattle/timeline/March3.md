@@ -1,4 +1,4 @@
-###### **(2)** March 3
+###### (2) March 3
 
 ### Civil Emergency Issued
 

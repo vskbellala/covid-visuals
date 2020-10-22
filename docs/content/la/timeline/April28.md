@@ -1,4 +1,4 @@
-###### **(7)** April 28
+###### (7) April 28
 
 ### Vote-By-Mail Approved
 

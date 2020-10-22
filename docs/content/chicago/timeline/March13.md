@@ -1,4 +1,4 @@
-###### **(3)** March 13
+###### (3) March 13
 
 ### Schools and Many Other Famous Buildings Close
 

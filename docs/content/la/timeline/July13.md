@@ -1,4 +1,4 @@
-###### **(12)** July 13
+###### (12) July 13
 
 ### Businesses Close Again
 

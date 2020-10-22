@@ -1,4 +1,4 @@
-###### **(2)** March 8
+###### (2) March 8
 
 ### Guidelines for Public Transportation
 

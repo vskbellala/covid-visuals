@@ -1,4 +1,4 @@
-###### **(2), (3)** March 16
+###### (2), (3) March 16
 
 ### Bars and Gyms Close
 

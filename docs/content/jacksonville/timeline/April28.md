@@ -1,4 +1,4 @@
-###### **(5)** April 28
+###### (5) April 28
 
 ### Mayor Signs Stimulus Package
 

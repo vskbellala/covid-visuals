@@ -1,4 +1,4 @@
-###### **(1)** March 4
+###### (1) March 4
 
 ### Emergency Declared
 

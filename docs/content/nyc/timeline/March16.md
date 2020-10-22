@@ -1,4 +1,4 @@
-###### **(4)** March 16
+###### (4) March 16
 
 ### Schools Close
 

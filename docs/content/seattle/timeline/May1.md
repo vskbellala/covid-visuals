@@ -1,4 +1,4 @@
-###### **(10)** May 1
+###### (10) May 1
 
 ### Economic Recovery Plan 
 

@@ -1,4 +1,4 @@
-###### **(8)** March 30
+###### (8) March 30
 
 ### USNS Comfort Arrives in NYC
 

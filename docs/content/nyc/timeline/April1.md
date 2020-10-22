@@ -1,4 +1,4 @@
-###### **(9)** April 1
+###### (9) April 1
 
 ### NYS Makes Drastic Decision on COVID Patients
 

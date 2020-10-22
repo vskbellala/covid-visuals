@@ -1,4 +1,4 @@
-###### **(12)** June 1
+###### (12) June 1
 
 ### Black Lives Matter Protests
 

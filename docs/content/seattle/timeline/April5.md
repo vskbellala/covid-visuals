@@ -1,4 +1,4 @@
-###### **(8)** April 5
+###### (8) April 5
 
 ### New Guidelines 
 

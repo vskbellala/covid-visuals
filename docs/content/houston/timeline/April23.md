@@ -1,4 +1,4 @@
-###### **(5), (6)** April 23
+###### (5), (6) April 23
 
 ### Hundreds Protest Houston Face Mask Order
 

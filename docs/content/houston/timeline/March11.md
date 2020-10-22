@@ -1,4 +1,4 @@
-###### **(1)** March 11
+###### (1) March 11
 
 ### Houston Mayor Declares Health Emergency
 

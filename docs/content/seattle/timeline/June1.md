@@ -1,4 +1,4 @@
-###### **(12)** June 1
+###### (12) June 1
 
 ### Stay-At-Home Order Expires
 

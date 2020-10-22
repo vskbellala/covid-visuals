@@ -1,4 +1,4 @@
-###### **(4)** March 15
+###### (4) March 15
 
 ### Restaurants and Bars Ordered to Close 
 

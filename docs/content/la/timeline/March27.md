@@ -1,4 +1,4 @@
-###### **(5)** March 27
+###### (5) March 27
 
 ### USNS Mercy Docks
 

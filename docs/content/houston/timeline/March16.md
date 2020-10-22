@@ -1,4 +1,4 @@
-###### **(2)** March 16
+###### (2) March 16
 
 ### Harris County Orders Bars to Close
 

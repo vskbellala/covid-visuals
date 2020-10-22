@@ -1,4 +1,4 @@
-###### **(3)** March 12
+###### (3) March 12
 
 ### Capacity for Events Issued
 

@@ -1,4 +1,4 @@
-###### **(14)** June 24
+###### (14) June 24
 
 ### Travel Quarantine in New York 
 

@@ -1,4 +1,4 @@
-###### **(4)** April 17
+###### (4) April 17
 
 ### Beaches Open
 

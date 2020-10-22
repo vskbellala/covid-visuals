@@ -1,4 +1,4 @@
-###### **(6)** April 7
+###### (6) April 7
 
 ### Masks Required for Essential Businesses
 

@@ -1,4 +1,4 @@
-###### **(1)** February 29
+###### (1) February 29
 
 ### State of Emergency Announced
 

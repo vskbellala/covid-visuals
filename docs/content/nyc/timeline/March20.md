@@ -1,4 +1,4 @@
-###### **(6), (7)** March 20
+###### (6), (7) March 20
 
 ### Nonessential Business Closed 
 

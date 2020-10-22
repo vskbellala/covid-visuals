@@ -1,4 +1,4 @@
-###### **(7)** March 23
+###### (7) March 23
 
 ### Stay-At-Home Order
 

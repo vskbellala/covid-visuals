@@ -1,4 +1,4 @@
-###### **(3)** April 3
+###### (3) April 3
 
 ### Stay-at-Home Order
 
