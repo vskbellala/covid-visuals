@@ -38,7 +38,7 @@ var timefiles = [
     'April17',
     'April21',
     'April23',
-    'bubble_chart'
+    'bubble_chart',
     'April24',
     'April26',
     'April27',
