@@ -1,4 +1,4 @@
-###### Mach 23
+###### March 23
 
 ### [The Coronavirus isn’t alive. That’s why it’s so hard to kill](https://www.washingtonpost.com/health/2020/03/23/coronavirus-isnt-alive-thats-why-its-so-hard-kill/)
 
