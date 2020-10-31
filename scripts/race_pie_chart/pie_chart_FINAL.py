@@ -95,21 +95,3 @@ fig.write_html(file="../../docs/plots/cases_pie.html",auto_play=True,full_html=F
     animation_opts=a_opts
 
 ) # write figure to html
-
-
-# Create pie chart using plotly express
-# Uses current date which was defined earlier in title
-# currently set to generate a DEATH graph; change 'death_vars' & 'death_names' to case variables to get case graph
-# fig = px.pie(rd.agg, values=rd.agg[case_vars], names=case_names,title='COVID-19 US Deaths by Race as of '+date)
-
-# #update info displayed
-# fig.update_traces(textposition='inside', textinfo='percent+label')
-
-# #change hover style
-# fig.update_layout(
-#     hoverlabel=dict(
-#         bgcolor="white", 
-#         font_size=16,
-#     )
-# )
-# fig.show()
