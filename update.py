@@ -6,6 +6,9 @@ import datetime
 Messy script for automagically updating each plot
 '''
 
+# python run command
+py = 'python '
+
 pathA = 'scripts'
 graphs = {'region_bar':"bar_graph_FINAL.py",
 'bubble_chart':'bubble_chart_FINAL.py',
@@ -23,7 +26,7 @@ os.chdir('scripts/')
 for graph in graphs:
 	print("Running {0} python script".format(graph))
 	sys.stdout.flush()
-	os.system('python3 {0}'.format(graphs[graph]))
+	os.system(py+'{0}'.format(graphs[graph]))
 	print('Completed successfully. Moving to next script.')
 
 
@@ -39,7 +42,7 @@ for spec in specg:
 	#Run Script
 	print('Running {0}'.format(specg[spec]))
 	sys.stdout.flush()
-	os.system('python3 {0}'.format(specg[spec]))
+	os.system(py+'{0}'.format(specg[spec]))
 
 	#Reset directory for next loop
 	print('Resetting directory.')
@@ -59,7 +62,7 @@ os.chdir('{0}/'.format(citydir))
 for city in cityg:
 	print("Running '{0}' python script".format(city))
 	sys.stdout.flush()
-	os.system('python3 {0}.py'.format(city))
+	os.system(py+'{0}.py'.format(city))
 	print('Completed successfully. Moving to next script.')
 
 
