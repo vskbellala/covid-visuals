@@ -2,7 +2,7 @@
 import pandas as pd
 
 url = 'https://api.covidtracking.com/v1/us/current.csv'
-data = pd.read_csv(url, usecols=['positive', 'death', 'totalTestResults'])
+data = pd.read_csv(url, usecols=['positive', 'death', 'hospitalizedCurrently'])
 df = pd.DataFrame(data)
 
 for col in df:

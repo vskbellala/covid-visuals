@@ -47,7 +47,7 @@
     // Structured ["Path String","Element ID"]
     files = [
         ['last_update.md', 'update'],
-        ['stats/totalTestResults.md', 'tests'],
+        ['stats/hospitalizedCurrently.md', 'hospital'],
         ['stats/positive.md', 'cases'],
         ['stats/death.md', 'deaths']
     ];
@@ -66,13 +66,13 @@
                 <div class="ui hidden divider"></div>
                 <div class="ui three stackable small statistics">
                     <div class="ui inverted statistic">
-                        <div class="value" id='tests'></div>
-                        <div class="label">Total Test Results</div>
+                        <div class="value" id='cases'></div>
+                        <div class="label">Cases</div>
                     </div>
                     <div class="ui inverted yellow statistic">
-                        <div class="value" id='cases'></div>
+                        <div class="value" id='hospital'></div>
                         <div class="label">
-                            Cases
+                            Hospitalized
                         </div>
                     </div>
                     <div class="ui inverted red statistic">

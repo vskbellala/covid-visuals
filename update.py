@@ -31,7 +31,9 @@ for graph in graphs:
 
 
 # commands for special scripts :0
-specg = {'race_pie_chart':'pie_chart_FINAL.py','SIR_model':'SIR_model_FINAL.py'}
+# specg = {'race_pie_chart':'pie_chart_FINAL.py','SIR_model':'SIR_model_FINAL.py'}
+# removed SIR as it is a very heavy plot that does not need to be updated often.
+specg = {'race_pie_chart':'pie_chart_FINAL.py'}
 
 for spec in specg:
 	# Get to correct directory
