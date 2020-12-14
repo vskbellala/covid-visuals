@@ -17,7 +17,8 @@ df['date'] = df['date'].astype('str')
 # Reformats the date to month/day
 
 url2 = 'https://www2.census.gov/programs-surveys/popest/tables/2010-2019/state/totals/nst-est2019-01.xlsx'
-population_data = pd.read_excel(url2)
+# switch to openpyxl as xlrd dropped support for .xlsx
+population_data = pd.read_excel(url2,engine="openpyxl")
 pop_df = pd.DataFrame(population_data)
 
 pop_df = pop_df.iloc[8:59]
