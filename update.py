@@ -10,11 +10,11 @@ Messy script for automagically updating each plot
 py = 'python '
 
 pathA = 'scripts'
-graphs = {'region_bar':"bar_graph_FINAL.py",
-'bubble_chart':'bubble_chart_FINAL.py',
-'bubble_map':'bubble_map_FINAL.py',
-'deaths_heat':'heatmap_percapita_FINAL.py',
-'covid_lines':'line_graph_FINAL.py',
+graphs = {'region_bar':"bar_graph.py",
+'bubble_chart':'bubble_chart.py',
+'bubble_map':'bubble_map.py',
+'deaths_heat':'heatmap_percapita.py',
+'covid_lines':'line_graph.py',
 'Statistics':'stats.py'
 }
 
@@ -31,9 +31,9 @@ for graph in graphs:
 
 
 # commands for special scripts :0
-# specg = {'race_pie_chart':'pie_chart_FINAL.py','SIR_model':'SIR_model_FINAL.py'}
+# specg = {'race_pie_chart':'pie_chart.py','SIR_model':'SIR_model.py'}
 # removed SIR as it is a very heavy plot that does not need to be updated often.
-specg = {'race_pie_chart':'pie_chart_FINAL.py'}
+specg = {'race_pie_chart':'pie_chart.py'}
 
 for spec in specg:
 	# Get to correct directory

@@ -4,4 +4,5 @@ numpy
 scipy
 sklearn
 us
+xlrd
 openpyxl
