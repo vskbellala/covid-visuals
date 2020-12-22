@@ -22,12 +22,13 @@ fig1 = go.Figure(
             go.Scatter(
             x=df_us['date'].loc[0:k],
             y=df_us['death'].loc[0:k],
+            yaxis="y2"          
             )])
 
         for k in range(0,len(df_us))] # Use list comprehension to populate each frame in the animation
 )
 fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['positive'],name="Positive Cases", line=dict(color='#1abd7c'))) # pos case graph
-fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['death'],name="Deaths", line=dict(color='#3fabe0'))) # death graph
+fig1.add_trace(go.Scatter(x=df_us['date'], y=df_us['death'],name="Deaths", line=dict(color='#3fabe0'),yaxis='y2')) # death graph
 fig1.update_traces(mode="lines") # change markers to a continuous line
 
 # animation configuration parameters
@@ -35,9 +36,10 @@ a_opts = {"frame": {"duration": 0, "redraw": False}, "fromcurrent": True, "trans
 
 fig1.update_layout(hovermode="x unified", # consistent hover
     xaxis=dict(linecolor='#ffffff', range=[df_us['date'].min(),df_us['date'].max()], autorange=False), #x axis range
-    yaxis=dict(gridcolor='#e8e8e8',linecolor='#ffffff', range=[0, df_us['positive'].max()*1.25], autorange=False), # y axis range - use pos max x 1.25 to improve viewability, color of y-axis gridlines
+    yaxis=dict(title="Case Count",gridcolor='#ffffff',linecolor='#ffffff', range=[0, df_us['positive'].max()*1.25], autorange=False), # y axis range - use pos max x 1.25 to improve viewability, color of y-axis gridlines
+    yaxis2=dict(title="Death Count",gridcolor='#ffffff',linecolor='#ffffff', range=[0, df_us['death'].max()*1.25], autorange=False,anchor='x',overlaying='y',side='right'),
     xaxis_title="Date",
-    yaxis_title="Count",
+    # yaxis_title="Count",
     title="COVID-19 US Cases & Deaths",
     font_family='Rockwell', # Font for plot
     paper_bgcolor='#ffffff', # Background color of whole thing
@@ -63,12 +65,13 @@ fig1.update_layout(hovermode="x unified", # consistent hover
             }# pause button
         ]
 }])
-# fig1.update_yaxes(type='log',range=[0,math.log(max(df_us['positive']),10)]) # log range; doesn't work
+#fig1.update_yaxes(type='log',range=[0,math.log(max(df_us['positive']),10)]) # log range; doesn't work
 fig1.layout.updatemenus[0].pad.r = 15
 fig1.layout.updatemenus[0].pad.b = 15
 # print(max(df_us['positive']))
+#fig1.show()
 fig1.write_html(file="../docs/plots/covid_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
-    animation_opts=a_opts
+     animation_opts=a_opts
 
 ) # write figure to html
 '''
