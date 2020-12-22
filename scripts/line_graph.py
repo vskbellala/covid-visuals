@@ -1,12 +1,15 @@
 import pandas as pd
 import plotly.graph_objects as go
+import numpy as np
+import math
 
 url = 'https://covidtracking.com/api/v1/us/daily.csv' # historical COVID 19 data for US
-us_cases = pd.read_csv(url,parse_dates=['date'],usecols=['date','positive','death'],converters={'positive':float}) 
+us_cases = pd.read_csv(url,parse_dates=['date'],usecols=['date','positive','death']) 
 # parse_dates formats the date column
 
 df = pd.DataFrame(us_cases) # extract and reverse only 3 specified columns
 # df_us['date'] = df_us['date'].dt.strftime('%Y-%m-%d') # reformat date columns
+df = df.fillna(0)
 df_us = df[::-1].reset_index(drop=True)
 
 
@@ -60,10 +63,10 @@ fig1.update_layout(hovermode="x unified", # consistent hover
             }# pause button
         ]
 }])
-
+# fig1.update_yaxes(type='log',range=[0,math.log(max(df_us['positive']),10)]) # log range; doesn't work
 fig1.layout.updatemenus[0].pad.r = 15
 fig1.layout.updatemenus[0].pad.b = 15
-
+# print(max(df_us['positive']))
 fig1.write_html(file="../docs/plots/covid_lines.html",auto_play=True,full_html=False,include_plotlyjs='cdn',
     animation_opts=a_opts
 
