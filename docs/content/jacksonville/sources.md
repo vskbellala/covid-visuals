@@ -1,8 +1,8 @@
 # Sources
 
-1. https://www.click2houston.com/news/local/2020/05/02/tracking-coronavirus-a-timeline-from-the-first-case-to-phase-1-of-reopening-texas-2-months-later/
-2. https://www.houstonpublicmedia.org/articles/news/health-science/coronavirus/2020/04/15/367100/combating-covid-19-in-greater-houston-a-timeline/
-3. https://www.khou.com/article/news/health/coronavirus/timeline-what-led-up-to-pause-in-texas-reopening-plan-surge-in-covid-19-cases/285-598205d0-9b31-4b39-a3ec-a0c32bb7a14f 
-4. https://abc13.com/covid-19-texas-timeline-all-coronavirus-events-in-government-response-state-restrictions/6345759/ 
-5. https://www.texastribune.org/2020/06/27/texas-republican-party-convention-coronavirus-houston/ 
-6. https://houston.eater.com/2020/8/19/21376060/houston-coronavirus-pandemic-restaurants-timeline-reopening  
+1. https://www.jaxdailyrecord.com/article/covid-19-timeline-key-events-in-the-coronavirus-pandemic-in-northeast-florida
+2. https://unfspinnaker.com/83474/news/covid-19-and-jacksonville-a-timeline-of-events/
+3. https://www.tallahassee.com/story/news/2020/07/06/florida-schools-mandated-reopen-august/5387823002/
+4. https://www.firstcoastnews.com/article/news/health/coronavirus/mayor-curry-extends-jacksonville-mask-mandate-another-30-days-for-covid-19/77-e622059c-25a6-4400-9746-232ae5e4e382
+5. https://www.news4jax.com/news/local/2020/12/23/state-signs-off-on-duval-clay-school-districts-plans-for-spring-reopening/
+6. https://www.news4jax.com/news/local/2020/12/13/uf-health-jacksonville-to-receive-covid-19-vaccine-monday/
