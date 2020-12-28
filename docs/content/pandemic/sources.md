@@ -18,3 +18,5 @@
 16. https://www.infoplease.com/may-2020-current-events-us-news
 17. https://www.infoplease.com/april-2020-current-events-us-news
 18. https://www.infoplease.com/august-2020-current-events-us-news
+19. https://www.infoplease.com/november-2020-current-events-us-news
+20. https://www.infoplease.com/december-2020-current-events-us-news
