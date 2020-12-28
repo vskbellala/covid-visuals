@@ -8,5 +8,7 @@ var timefiles = [
     'May26',
     'June12',
     'June25',
-    'June27'
+    'June27',
+    'September21',
+    'October7'
 ];
