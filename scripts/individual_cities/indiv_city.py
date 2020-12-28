@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.graph_objects as go
+import us
 
 url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv' # historical COVID 19 data for US
 us_cases = pd.read_csv(url, parse_dates=['date'], usecols=['date','county','deaths', 'cases', 'state'], converters={'cases':float}) 
@@ -8,32 +9,49 @@ us_cases = pd.read_csv(url, parse_dates=['date'], usecols=['date','county','deat
 df = pd.DataFrame(us_cases) # extract and reverse only 3 specified columns
 df['date'] = df['date'].astype('str')
 
-def plot(county, state, cases_color, deaths_color):
+def abbr(s):
+	'''
+	Abbreviate the string s to first letter of each word IF it's multiple words
+	'''
+	if " " in s:
+		l = s.split()
+		l = list(map(lambda x: x[0],l))
+		return "".join(l)
+	return s
 
-	if state == 'Illinois':
-		plot_title = 'Chicago, IL'
-		event_sheet = 'chicago_sheet'
-		plot_file = 'chicago_lines'
-	elif state == 'Texas':
-		plot_title = 'Houston, TX'
-		event_sheet = 'houston_sheet'
-		plot_file = 'houston_lines'
-	elif state == 'Florida':
-		plot_title = 'Jacksonville, FL'
-		event_sheet = 'jacksonville_sheet'
-		plot_file = 'jacksonville_lines'
-	elif state == 'California':
-		plot_title = 'Los Angeles, CA'
-		event_sheet = 'la_sheet'
-		plot_file = 'la_lines'
-	elif state == 'New York':
-		plot_title = 'New York City, NY'
-		event_sheet = 'nyc_sheet'
-		plot_file = 'nyc_lines'
-	else:
-		plot_title = 'Seattle, WA'
-		event_sheet = 'seattle_sheet'
-		plot_file = 'seattle_lines'
+def plot(city, county, state, cases_color, deaths_color):
+	'''
+	Plot covid cases and deaths of the specified city county state combination.
+	Also has custom cases and deaths line colors.
+	'''
+	plot_title = '{0}, {1}'.format(city,us.states.lookup(state).abbr)
+	c_abbr = abbr(city).lower()
+	event_sheet = '{}_sheet'.format(c_abbr)
+	plot_file = '{}_lines'.format(c_abbr)
+	# if state == 'Illinois':
+	# 	plot_title = 'Chicago, IL'
+	# 	event_sheet = 'chicago_sheet'
+	# 	plot_file = 'chicago_lines'
+	# elif state == 'Texas':
+	# 	plot_title = 'Houston, TX'
+	# 	event_sheet = 'houston_sheet'
+	# 	plot_file = 'houston_lines'
+	# elif state == 'Florida':
+	# 	plot_title = 'Jacksonville, FL'
+	# 	event_sheet = 'jacksonville_sheet'
+	# 	plot_file = 'jacksonville_lines'
+	# elif state == 'California':
+	# 	plot_title = 'Los Angeles, CA'
+	# 	event_sheet = 'la_sheet'
+	# 	plot_file = 'la_lines'
+	# elif state == 'New York':
+	# 	plot_title = 'New York City, NY'
+	# 	event_sheet = 'nyc_sheet'
+	# 	plot_file = 'nyc_lines'
+	# else:
+	# 	plot_title = 'Seattle, WA'
+	# 	event_sheet = 'seattle_sheet'
+	# 	plot_file = 'seattle_lines'
 
 
 	df_us = df.loc[(df['county'] == county) & (df['state'] == state)]
@@ -176,12 +194,12 @@ def plot(county, state, cases_color, deaths_color):
 	    frames, or auto_play is False.
 	'''
 
-plot('Cook', 'Illinois', '#ff0d6a', '#b3295e')
-plot('Harris', 'Texas', '#2adbcf', '#218a83')
-plot('Duval', 'Florida', '#fc03a5', '#7b03fc')
-plot('Los Angeles', 'California', '#a3cf06', '#5f7022')
-plot('New York City', 'New York', '#fc8403', '#cf1706')
-plot('King', 'Washington', '#e61c73', '#8f2196')
+plot('Chicago','Cook', 'Illinois', '#ff0d6a', '#b3295e')
+plot('Houston','Harris', 'Texas', '#2adbcf', '#218a83')
+plot('Jacksonville','Duval', 'Florida', '#fc03a5', '#7b03fc')
+plot('Los Angeles', 'Los Angeles', 'California', '#a3cf06', '#5f7022')
+plot('New York City', 'New York City', 'New York', '#fc8403', '#cf1706')
+plot('Seattle', 'King', 'Washington', '#e61c73', '#8f2196')
 
 
 

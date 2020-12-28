@@ -15,7 +15,8 @@ graphs = {'region_bar':"bar_graph.py",
 'bubble_map':'bubble_map.py',
 'deaths_heat':'heatmap_percapita.py',
 'covid_lines':'line_graph.py',
-'Statistics':'stats.py'
+'Statistics':'stats.py',
+'percent_hospitalized':'heatmap_percenthospitalized.py',
 }
 
 # loop for running python scripts without special dependencies
@@ -53,7 +54,8 @@ for spec in specg:
 
 # Commands for city charts!
 
-cityg = ['chicago','houston','jacksonville','LA','nyc','seattle']
+# legacy from when we had multiple python scripts
+cityg = ['indiv_city']
 citydir = 'individual_cities'
 
 # Get to correct directory
