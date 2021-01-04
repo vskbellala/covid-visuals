@@ -1,1 +1,1 @@
-**Last updated [12/28/2020](https://github.com/vskbellala/covid-visuals/commits/master).**
+**Last updated [01/04/2021](https://github.com/vskbellala/covid-visuals/commits/master).**
