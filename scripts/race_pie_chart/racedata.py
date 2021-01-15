@@ -31,7 +31,7 @@ class raceData():
 		self.cols =  ['Date','Cases_White', 'Cases_Black', 'Cases_LatinX', 'Cases_Asian', 'Cases_AIAN', 'Cases_NHPI', 'Cases_Multiracial', 'Cases_Other', 'Cases_Unknown', 'Deaths_White', 'Deaths_Black', 'Deaths_LatinX', 'Deaths_Asian', 'Deaths_AIAN', 'Deaths_NHPI', 'Deaths_Multiracial', 'Deaths_Other', 'Deaths_Unknown']
 		self.data = pd.read_csv(self.url, usecols=self.cols,parse_dates=['Date'])
 		self.df = pd.DataFrame(self.data)
-		self.df['Cases_White'] = pd.to_numeric(self.df['Cases_White'].str.replace(',',''))
+		# self.df['Cases_White'] = pd.to_numeric(self.df['Cases_White'].str.replace(',',''))
 		# self.df['Cases_White'] = pd.to_numeric(self.df['Cases_White'])
 	def group_data(self):
 		self.group = self.df.groupby('Date')
