@@ -33,11 +33,13 @@
     // Files 2D Array
     // Structured ["Path String","Element ID"]
 
-    fpath = "safe/";
-    files = ['safe', 'test', 'vaccine', 'treatment', 'strain'];
-    readFile('last_update.md', 'update');
+    files = [
+        ['safe/safe.md', 'safe'],
+        ['last_update.md', 'update']
+    ];
+
     for (i = 0; i < files.length; i++) {
-        readFile(fpath + files[i] + '.md', files[i]);
+        readFile(files[i][0], files[i][1]);
     }
     </script>
     <div class="ui vertical inverted teal sidebar compact borderless large menu">
@@ -88,19 +90,6 @@
         </div>
         <div class='ui hidden divider'></div>
         <div class="ui text container basic segment" id='safe'></div>
-        <div class='ui text container vertical segment'>
-            <h1>Further Reading</h1>
-            <div class="ui top attached tabular stackable menu">
-                <a class="item active" data-tab="test">Testing</a>
-                <a class="item" data-tab="vaccine">The Vaccine</a>
-                <a class="item" data-tab="treatment">Treatments</a>
-                <a class="item" data-tab="strain">Evolution of the Virus</a>
-            </div>
-            <div class="ui bottom attached tab segment active" data-tab="test" id='test'></div>
-            <div class="ui bottom attached tab segment" data-tab="vaccine" id='vaccine'></div>
-            <div class="ui bottom attached tab segment" data-tab="treatment" id='treatment'> </div>
-            <div class="ui bottom attached tab segment" data-tab="strain" id='strain'></div>
-        </div>
     </div>
     <div class="ui inverted vertical footer segment">
         <div class="ui center aligned container">
