@@ -12,7 +12,7 @@ py = 'python '
 pathA = 'scripts'
 graphs = {'region_bar':"bar_graph.py",
 'bubble_chart':'bubble_chart.py',
-'bubble_map':'bubble_map.py',
+# 'bubble_map':'bubble_map.py',
 'deaths_heat':'heatmap_percapita.py',
 'covid_lines':'line_graph.py',
 'Statistics':'stats.py',
