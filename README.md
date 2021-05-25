@@ -1,5 +1,8 @@
 # :microbe: covid-visuals
 
+Development on covid-visuals has ended for the time being. This repository is archived and read-only.
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/273356b5-3005-49de-b5e1-2f9f69a6cd07/deploy-status)](https://app.netlify.com/sites/covid-visuals/deploys)
 
 [covid-visuals](https://covid-visuals.netlify.app/) is a website documenting the spread of COVID-19 and its impacts on the United States through custom visuals and a timeline of major events.
